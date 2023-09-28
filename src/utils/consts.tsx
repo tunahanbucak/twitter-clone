@@ -90,6 +90,7 @@ export const mainMenu = [
   {
     path: "/messages",
     title: " Mesajlar",
+    notification: 1,
     icon: {
       active: (
         <svg
