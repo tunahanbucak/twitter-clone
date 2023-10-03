@@ -170,13 +170,25 @@ export default function More() {
                   Para kazanma
                 </Typography>
               </Button>
-              <Accordion>
+              <Accordion
+                sx={{
+                  background: "black",
+                }}
+              >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography variant="h6">
+                  <Typography
+                    sx={{
+                      paddingRight: "1rem",
+                      fontSize: "1.25rem",
+                      color: "#ffffff",
+                      textTransform: "none",
+                      fontWeight: "bold",
+                    }}
+                  >
                     İçerik Üreticisi Stüdyosu
                   </Typography>
                 </AccordionSummary>
@@ -195,38 +207,25 @@ export default function More() {
                   </Link>
                 </AccordionDetails>
               </Accordion>
-              <Accordion>
+              <Accordion
+                sx={{
+                  background: "black",
+                }}
+              >
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography variant="h6">
-                    İçerik Üreticisi Stüdyosu
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Link
-                    to="/"
-                    className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[color:var(--background-secondary)] transition-colors"
+                  <Typography
+                    sx={{
+                      paddingRight: "1rem",
+                      fontSize: "1.25rem",
+                      color: "#ffffff",
+                      textTransform: "none",
+                      fontWeight: "bold",
+                    }}
                   >
-                    <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
-                      <path
-                        fill="currentColor"
-                        d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"
-                      />
-                    </svg>
-                    İstatistikler
-                  </Link>
-                </AccordionDetails>
-              </Accordion>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography variant="h6">
                     İçerik Üreticisi Stüdyosu
                   </Typography>
                 </AccordionSummary>
