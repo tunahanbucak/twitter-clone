@@ -26,6 +26,8 @@ function App() {
         <Route path="communities" element={<Communities />} />
         <Route path="premium" element={<Premium />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="/:slug" element={<Profile />} />
+
         <Route path="bookmarks" element={<Bookmarks />} />
       </Routes>
     </BrowserRouter>

@@ -13,22 +13,9 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useState } from "react";
 
 export default function More() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event: {
-    currentTarget: React.SetStateAction<null>;
-  }) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
   return (
     <PopupState variant="popover" popupId="demo-popup-popover">
       {(popupState: any) => (
@@ -90,9 +77,7 @@ export default function More() {
           <Popover
             sx={{
               ml: 9,
-              width: "100%",
-
-              // height: 273,
+              maxWidth: 318,
             }}
             {...bindPopover(popupState)}
             anchorOrigin={{
@@ -195,6 +180,11 @@ export default function More() {
                   Para kazanma
                 </Typography>
               </Button>
+              <Box
+                sx={{
+                  border: "1px solid rgb(47, 51, 54)",
+                }}
+              ></Box>
               <Accordion
                 sx={{
                   background: "black",
@@ -213,11 +203,11 @@ export default function More() {
                 >
                   <Typography
                     sx={{
-                      paddingRight: "1rem",
                       fontSize: "15px",
                       color: "#ffffff",
                       textTransform: "none",
                       fontWeight: "bold",
+                      fontFamily: "inherit",
                     }}
                   >
                     İçerik Üreticisi Stüdyosu
@@ -240,7 +230,6 @@ export default function More() {
                       transition: "background-color 0.3s",
                     }}
                     to="/"
-                    className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium hover:bg-[color:var(--background-secondary)] transition-colors"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path
@@ -275,6 +264,7 @@ export default function More() {
                       color: "#ffffff",
                       textTransform: "none",
                       fontWeight: "bold",
+                      fontFamily: "inherit",
                     }}
                   >
                     Profesyonel Araçlar
@@ -330,6 +320,7 @@ export default function More() {
                       color: "#ffffff",
                       textTransform: "none",
                       fontWeight: "bold",
+                      fontFamily: "inherit",
                     }}
                   >
                     Ayarlar ve Destek

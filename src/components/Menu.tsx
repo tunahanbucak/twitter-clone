@@ -16,6 +16,7 @@ export default function Menu() {
     >
       {mainMenu.map((menu, index) => (
         <NavLink
+          key={index}
           to={menu.path}
           style={{
             textDecoration: "none",
@@ -93,7 +94,6 @@ export default function Menu() {
       ))}
 
       <More />
-
       <New />
     </Box>
   );

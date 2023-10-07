@@ -1,3 +1,7 @@
+import store from "../store";
+
+const states = store.getState();
+
 export const mainMenu = [
   {
     path: "/",
@@ -249,8 +253,8 @@ export const mainMenu = [
     },
   },
   {
-    path: "/profile",
-    title: " Profil",
+    path: `/${states?.auth?.currentAccount?.username}`,
+    title: "Profil",
     icon: {
       active: (
         <svg
