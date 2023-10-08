@@ -10,15 +10,21 @@ import {
   AccordionSummary,
   Box,
   Divider,
+  Link,
 } from "@mui/material";
-import { Link } from "react-router-dom";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
+import Accordionn from "./Accordionn";
 
 export default function More() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <PopupState variant="popover" popupId="demo-popup-popover">
-      {(popupState: any) => (
+      {(popupState) => (
         <Box
           sx={{
             position: "relative",
@@ -28,6 +34,10 @@ export default function More() {
             {...bindTrigger(popupState)}
             sx={{
               ml: -1,
+              bgcolor: "transparent",
+              "&:hover": {
+                bgcolor: "transparent",
+              },
             }}
           >
             <Box
@@ -76,8 +86,10 @@ export default function More() {
           </Button>
           <Popover
             sx={{
-              ml: 9,
-              maxWidth: 318,
+              ml: 7,
+              mt: 4,
+              width: 318,
+              //  maxWidth: 318,
             }}
             {...bindPopover(popupState)}
             anchorOrigin={{
@@ -92,6 +104,7 @@ export default function More() {
             <Box
               sx={{
                 background: "black",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
                 boxShadow:
                   "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
               }}
@@ -102,12 +115,54 @@ export default function More() {
                   width: "100%",
                   transition: "bacgroundcolor 0.3s",
                   display: "inline-flex",
-                  alignItems: "center",
+                  alignItems: "flex-start",
                   gap: "1rem",
-                  ml: -8,
+
                   background: "black",
                   "&:hover": {
-                    backgroundColor: "black",
+                    backgroundColor: " #5555",
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "26.25px",
+                    height: "26.25px",
+                    position: "relative",
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" width={24} height={24}>
+                    <path
+                      fill="#fff"
+                      d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"
+                    ></path>
+                  </svg>
+                </Box>
+                <Typography
+                  sx={{
+                    paddingRight: "1rem",
+                    fontSize: "1.25rem",
+                    color: "#ffffff",
+                    textTransform: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Yer İşaretleri
+                </Typography>
+              </Button>
+
+              <Button
+                sx={{
+                  height: "3.5rem",
+                  width: "100%",
+                  transition: "bacgroundcolor 0.3s",
+                  display: "inline-flex",
+                  alignItems: "flex-start",
+                  gap: "1rem",
+
+                  background: "black",
+                  "&:hover": {
+                    backgroundColor: " #5555",
                   },
                 }}
               >
@@ -139,18 +194,17 @@ export default function More() {
               </Button>
               <Button
                 sx={{
-                  paddingLeft: "1rem",
-                  paddingRight: "1rem",
                   height: "3.5rem",
-                  ml: -4,
+
                   width: "100%",
                   transition: "bacgroundcolor 0.3s",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "1.25rem",
                   background: "black",
+
                   "&:hover": {
-                    backgroundColor: "black",
+                    backgroundColor: " #5555",
                   },
                 }}
               >
@@ -185,16 +239,24 @@ export default function More() {
                   border: "1px solid rgb(47, 51, 54)",
                 }}
               ></Box>
+
               <Accordion
+                expanded={isOpen}
+                onChange={handleToggle}
                 sx={{
                   background: "black",
                 }}
               >
                 <AccordionSummary
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: " #5555",
+                    },
+                  }}
                   expandIcon={
                     <ExpandMoreIcon
                       sx={{
-                        color: "#fff",
+                        color: isOpen ? "rgb(29, 155, 240)" : "#fff",
                       }}
                     />
                   }
@@ -215,7 +277,7 @@ export default function More() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Link
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       color: "#e7e9ea",
@@ -229,7 +291,7 @@ export default function More() {
                       fontWeight: "500",
                       transition: "background-color 0.3s",
                     }}
-                    to="/"
+                    href="/"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path
@@ -242,15 +304,22 @@ export default function More() {
                 </AccordionDetails>
               </Accordion>
               <Accordion
+                expanded={isOpen}
+                onChange={handleToggle}
                 sx={{
                   background: "black",
                 }}
               >
                 <AccordionSummary
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: " #5555",
+                    },
+                  }}
                   expandIcon={
                     <ExpandMoreIcon
                       sx={{
-                        color: "#fff",
+                        color: isOpen ? "rgb(29, 155, 240)" : "#fff",
                       }}
                     />
                   }
@@ -272,7 +341,7 @@ export default function More() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Link
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       color: "#e7e9ea",
@@ -285,7 +354,7 @@ export default function More() {
                       fontWeight: "500",
                       transition: "background-color 0.3s",
                     }}
-                    to="/"
+                    href="/"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path
@@ -298,15 +367,22 @@ export default function More() {
                 </AccordionDetails>
               </Accordion>
               <Accordion
+                expanded={isOpen}
+                onChange={handleToggle}
                 sx={{
                   background: "black",
                 }}
               >
                 <AccordionSummary
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: " #5555",
+                    },
+                  }}
                   expandIcon={
                     <ExpandMoreIcon
                       sx={{
-                        color: "#fff",
+                        color: isOpen ? "rgb(29, 155, 240)" : "#fff",
                       }}
                     />
                   }
@@ -328,7 +404,7 @@ export default function More() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Link
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       color: "#e7e9ea",
@@ -340,8 +416,11 @@ export default function More() {
                       fontSize: "15px",
                       fontWeight: "500",
                       transition: "background-color 0.3s",
+                      "&:hover": {
+                        backgroundColor: "rgb(85, 85, 85)", // Burada koyu gri rengin rgb değerini kullanın
+                      },
                     }}
-                    to="/"
+                    href="/"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path
@@ -352,7 +431,7 @@ export default function More() {
                     <Typography>Ayarlar ve gizlilik</Typography>
                   </Link>
                   <Link
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       color: "#e7e9ea",
@@ -365,7 +444,7 @@ export default function More() {
                       fontWeight: "500",
                       transition: "background-color 0.3s",
                     }}
-                    to="/"
+                    href="/"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path
@@ -377,7 +456,7 @@ export default function More() {
                   </Link>
                   {/* bu buton olacak*/}
                   <Link
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       color: "#e7e9ea",
@@ -390,7 +469,7 @@ export default function More() {
                       fontWeight: "500",
                       transition: "background-color 0.3s",
                     }}
-                    to="/"
+                    href="/"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path
@@ -402,7 +481,7 @@ export default function More() {
                   </Link>{" "}
                   {/* bu buton olacak*/}
                   <Link
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       display: "flex",
                       color: "#e7e9ea",
@@ -415,7 +494,7 @@ export default function More() {
                       fontWeight: "500",
                       transition: "background-color 0.3s",
                     }}
-                    to="/"
+                    href="/"
                   >
                     <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                       <path

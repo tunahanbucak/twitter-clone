@@ -11,7 +11,6 @@ import Notifications from "./pages/Notifications";
 import MainLayout from "./layouts/MainLayout";
 import Messages from "./pages/Messages";
 import Lists from "./pages/Lists";
-import Bookmarks from "./pages/Bookmarks";
 import Communities from "./pages/Communities";
 import Premium from "./pages/Premium";
 import Profile from "./pages/Profile";
@@ -32,8 +31,6 @@ function App() {
         <Route path="premium" element={<Premium />} />
         <Route path="profile" element={<Profile />} />
         <Route path="/:slug" element={<Profile />} />
-
-        <Route path="bookmarks" element={<Bookmarks />} />
       </Routes>
     </BrowserRouter>
   );

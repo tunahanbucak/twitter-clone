@@ -11,7 +11,8 @@ function Sidebar() {
       sx={{
         height: "100%",
         maxHeight: "100vh",
-        width: "275px",
+
+        maxWidth: "275px",
 
         padding: "3px",
         display: "flex",

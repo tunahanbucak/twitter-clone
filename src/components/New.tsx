@@ -6,8 +6,8 @@ export default function New() {
   return (
     <Box
       sx={{
-        paddingBottom: "3rem",
-        paddingTop: "1rem",
+        paddingBottom: "6.3rem",
+        paddingTop: "1.2rem",
         width: "90%",
       }}
     >

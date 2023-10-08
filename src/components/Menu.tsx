@@ -29,9 +29,11 @@ export default function Menu() {
           {({ isActive }) => (
             <Box
               sx={{
+                borderRadius: "99px",
                 "&:hover": {
-                  backgroundColor: isActive ? "#eff3f41a" : "initial",
-                  width: 197,
+                  //      backgroundColor: isActive ? "#eff3f41a" : "initial",
+                  width: "100%",
+                  background: "#5555",
                 },
               }}
             >

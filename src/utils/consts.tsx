@@ -156,38 +156,7 @@ export const mainMenu = [
       ),
     },
   },
-  {
-    path: "/bookmarks",
-    title: " Yer İşaretleri",
-    icon: {
-      active: (
-        <svg
-          viewBox="0 0 24 24"
-          width={26.25}
-          height={26.25}
-          style={{ display: "block" }}
-        >
-          <path
-            fill="#fff"
-            d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"
-          ></path>
-        </svg>
-      ),
-      passive: (
-        <svg
-          viewBox="0 0 24 24"
-          width={26.25}
-          height={26.25}
-          style={{ display: "block" }}
-        >
-          <path
-            fill="#e7e9ea"
-            d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5z"
-          ></path>
-        </svg>
-      ),
-    },
-  },
+
   {
     path: "/communities",
     title: " Topluluklar",
