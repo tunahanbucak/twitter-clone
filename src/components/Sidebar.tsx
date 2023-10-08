@@ -9,19 +9,14 @@ function Sidebar() {
   return (
     <Box
       sx={{
-        // width: 275,
-        // //height: 500,
-        // padding: 1,
-        // display: "flex",
-        // flexDirection: "column",
-        // maxHeight: "100vh",
-        // // backgroundColor: "#FF0000",
-        width: "275px",
+        height: "100%",
         maxHeight: "100vh",
-        padding: "2px",
+        width: "275px",
+
+        padding: "3px",
         display: "flex",
         flexDirection: "column",
-        // overflowY: "auto",
+        overflowY: "auto",
       }}
     >
       <Logo />

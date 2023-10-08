@@ -11,7 +11,7 @@ export default function MainLayout({ children }: Props) {
   return (
     <Box
       sx={{
-        maxWidth: 1265,
+        maxWidth: 1275,
         margin: "auto",
         display: "flex",
       }}

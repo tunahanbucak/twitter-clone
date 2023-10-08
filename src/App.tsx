@@ -2,6 +2,8 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Box } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
@@ -13,7 +15,10 @@ import Bookmarks from "./pages/Bookmarks";
 import Communities from "./pages/Communities";
 import Premium from "./pages/Premium";
 import Profile from "./pages/Profile";
+
 function App() {
+  const theme = createTheme(); // Temanızı oluşturun
+
   return (
     <BrowserRouter>
       <Routes>

@@ -10,8 +10,8 @@ export default function Menu() {
   return (
     <Box
       sx={{
-        mt: 2,
-        mb: 4,
+        //mb: 4,
+        ml: 1,
       }}
     >
       {mainMenu.map((menu, index) => (

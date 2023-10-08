@@ -15,18 +15,18 @@ interface AuthState {
 const initialState: AuthState = {
   currentAccount: {
     id: 1,
-    username: "prototurkcom",
-    fullName: "./prototurk",
+    username: "tunahanbucakcom",
+    fullName: "tunahanbucak",
     avatar:
       "https://pbs.twimg.com/profile_images/1200814302820753410/AhAh3xlU_400x400.png",
   },
   accounts: [
     {
       id: 1,
-      username: "prototurkcom",
-      fullName: "./prototurk",
+      username: "TunahanBucak",
+      fullName: "Tunahan Buçak",
       avatar:
-        "https://pbs.twimg.com/profile_images/1200814302820753410/AhAh3xlU_400x400.png",
+        "https://pbs.twimg.com/profile_images/1645080789472665601/i0Uwo_sL_400x400.jpg",
     },
     {
       id: 2,
