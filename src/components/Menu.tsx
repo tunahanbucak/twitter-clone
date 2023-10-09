@@ -1,10 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { mainMenu } from "../utils/consts";
+
 import ButtonComponent from "./ButtonComponent";
 import More from "./More";
 import New from "./New";
+import { mainMenu } from "../utils/consts";
 
 export default function Menu() {
   return (

@@ -16,8 +16,6 @@ import Premium from "./pages/Premium";
 import Profile from "./pages/Profile";
 
 function App() {
-  const theme = createTheme(); // Temanızı oluşturun
-
   return (
     <BrowserRouter>
       <Routes>

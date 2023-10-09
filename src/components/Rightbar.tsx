@@ -1,5 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
+import Search from "./Search";
+import Premium from "./Premium";
 
 export default function Rightbar() {
   return (
@@ -9,7 +11,8 @@ export default function Rightbar() {
         mr: 2.5,
       }}
     >
-      Rightbar
+      <Search />
+      <Premium />
       <Box></Box>
     </Box>
   );

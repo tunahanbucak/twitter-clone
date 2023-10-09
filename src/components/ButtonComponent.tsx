@@ -17,9 +17,14 @@ export default function ButtonComponent({
       sx={{
         background: "#1d9bf0",
         borderRadius: "999px",
-        width: "90%",
+        width: {
+          small: "30%",
+          medium: "36px",
+          large: "90%",
+        }[size],
+
         height: {
-          small: "20px",
+          small: "36px",
           medium: "36px",
           large: "52px",
         }[size],
@@ -27,7 +32,7 @@ export default function ButtonComponent({
         alignItems: "center",
         justifyContent: "center",
         padding: {
-          small: "12px",
+          small: "0px 16px 0px 16px",
           medium: "0px 16px",
           large: "0px 32px",
         }[size],

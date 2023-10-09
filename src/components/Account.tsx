@@ -104,8 +104,7 @@ export default function Account() {
       </Button>
       <Popover
         sx={{
-          mt: -10,
-          ml: 3,
+          mt: -9,
         }}
         id={id}
         open={open}
@@ -139,20 +138,19 @@ export default function Account() {
               display: "inline-flex",
               alignItems: "center",
               gap: "1rem",
-              ml: -8,
               background: "black",
               "&:hover": {
-                backgroundColor: "black",
+                backgroundColor: "#5555",
               },
             }}
           >
             <Typography
               sx={{
-                paddingLeft: "1rem",
-                //       fontSize: "1.25rem",
+                paddingRight: "5rem",
+                fontSize: "1rem",
                 color: "#ffffff",
                 textTransform: "none",
-                // fontWeight: "bold",
+                fontWeight: "bold",
               }}
             >
               Var olan bir hesap ekle
@@ -160,25 +158,26 @@ export default function Account() {
           </Button>
           <Button
             sx={{
-              paddingLeft: "1rem",
+              //  paddingLeft: "1rem",
               paddingRight: "1rem",
               height: "3.5rem",
-              ml: -4,
+              //  ml: -4,
               width: "100%",
               transition: "bacgroundcolor 0.3s",
-              display: "inline-flex",
-              alignItems: "center",
+              //display: "inline-flex",
+              // alignItems: "center",
               gap: "1.25rem",
               background: "black",
               "&:hover": {
-                backgroundColor: "black",
+                backgroundColor: "#5555",
               },
             }}
           >
             <Typography
               sx={{
-                //  paddingRight: "1rem",
-                fontSize: "1.25rem",
+                paddingRight: "2.1rem",
+                mt: 2,
+                fontSize: "1rem",
                 color: "#ffffff",
                 textTransform: "none",
                 fontWeight: "bold",
@@ -191,86 +190,4 @@ export default function Account() {
       </Popover>
     </Box>
   );
-}
-
-{
-  /*  
-     <Popover
-        sx={{}}
-        id={id}
-        open={open}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
-      >
-        <Box
-          sx={{
-            p: 2,
-            backgroundColor: "black",
-            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", // Box shadow
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-
-            width: 300,
-            height: 132,
-
-            border: "1px solid gray",
-          }}
-        >
-          <Button
-            variant="contained"
-            sx={{
-              width: "100%",
-              mb: 1,
-            }}
-          >
-            Buton 1
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              width: "100%",
-            }}
-          >
-            Buton 2
-          </Button>
-        </Box>
-      </Popover>
-  
-  
-  
-  
-  <Button
-          sx={{
-            color: "white",
-            borderRadius: "full",
-            "&:hover": {
-              backgroundColor: "#efffa",
-            },
-            width: "full",
-            display: "flex",
-            textAlign: "left",
-            alignItems: "center",
-            transition: "background-color 0.3s",
-            outline: "none",
-          }}
-        ></Button>
-      <Accordion sx={{ color: "white" }}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            ACILACAK YER
-          </AccordionSummary>
-          <AccordionDetails></AccordionDetails>
-        </Accordion> */
 }
