@@ -2,6 +2,9 @@ import { Box } from "@mui/material";
 import React from "react";
 import Search from "./Search";
 import Premium from "./Premium";
+import Agendas from "./Agendas";
+import Topics from "./Topics";
+import WhoFollow from "./WhoFollow";
 
 export default function Rightbar() {
   return (
@@ -13,7 +16,8 @@ export default function Rightbar() {
     >
       <Search />
       <Premium />
-      <Box></Box>
+      <Topics />
+      <WhoFollow />
     </Box>
   );
 }

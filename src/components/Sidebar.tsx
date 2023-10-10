@@ -9,11 +9,10 @@ function Sidebar() {
   return (
     <Box
       sx={{
-        height: "100%",
+        position: "sticky",
+        top: 0,
         maxHeight: "100vh",
-
         maxWidth: "275px",
-
         padding: "3px",
         display: "flex",
         flexDirection: "column",
