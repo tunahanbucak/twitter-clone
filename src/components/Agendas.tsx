@@ -21,13 +21,14 @@ export default function Agendas({ title, children, more }: AgendasProps) {
       <Typography
         variant="h5"
         sx={{
-          paddingY: 3,
-          paddingX: 4,
+          paddingY: 1,
+          paddingX: 2,
           fontSize: "1.25rem",
           fontWeight: "bold",
           display: "flex",
           alignItems: "center",
           color: "#e7e9ea",
+          mb: 0.3,
         }}
       >
         {title}
@@ -36,6 +37,7 @@ export default function Agendas({ title, children, more }: AgendasProps) {
         sx={{
           display: "grid",
           color: "#e7e9ea",
+          fontSize: "15px",
         }}
       >
         {children}

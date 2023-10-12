@@ -262,6 +262,7 @@ export const topics = [
       type: "tag",
       value: "dilanpolat",
     },
+    postCount: 15640,
   },
   {
     title: "Türkiye tarihinde gündemde",
@@ -277,6 +278,7 @@ export const topics = [
       type: "tag",
       value: "dilanpolat",
     },
+    postCount: 15640,
   },
   {
     title: "Türkiye tarihinde gündemde",
@@ -292,6 +294,7 @@ export const topics = [
       type: "tag",
       value: "dilanpolat",
     },
+    postCount: 15640,
   },
   {
     title: "Türkiye tarihinde gündemde",
@@ -307,6 +310,7 @@ export const topics = [
       type: "tag",
       value: "dilanpolat",
     },
+    postCount: 15640,
   },
   {
     title: "Türkiye tarihinde gündemde",

@@ -40,9 +40,9 @@ export default function Premium() {
             lineHeight: "1.5rem",
             color: "rgb(231,233,234)",
             fontWeight: "bold",
-            fontSize: "0.99rem",
-            mt: 0.1,
-            mb: 1,
+            fontSize: "0.94rem",
+            mt: 0.5,
+            mb: 0.7,
           }}
         >
           Yeni özellikleri açmak için abone ol ve uygun olman durumunda reklam
