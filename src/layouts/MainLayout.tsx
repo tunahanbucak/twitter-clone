@@ -12,8 +12,9 @@ export default function MainLayout({ children }: Props) {
     <Box
       sx={{
         maxWidth: 1275,
-        margin: "auto",
+        mx: "auto",
         display: "flex",
+        paddingLeft: 1,
       }}
     >
       <Sidebar />

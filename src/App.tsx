@@ -1,9 +1,4 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Box } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";

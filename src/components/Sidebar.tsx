@@ -9,14 +9,17 @@ function Sidebar() {
   return (
     <Box
       sx={{
-        position: "sticky",
-        top: 0,
+        width: "275px",
         maxHeight: "100vh",
-        maxWidth: "275px",
-        padding: "3px",
+        minHeight: "100vh",
+        paddingX: "2",
         display: "flex",
         flexDirection: "column",
-        overflowY: "auto",
+        position: "sticky",
+        top: "0",
+        paddingLeft: 1,
+        //paddingTop: 1,
+        // mt: 1,
       }}
     >
       <Logo />

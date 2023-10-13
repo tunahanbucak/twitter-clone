@@ -6,7 +6,7 @@ export default function Logo() {
     <Box
       sx={{
         paddingY: 1,
-        mt: -1.9,
+        mt: -1.0,
       }}
     >
       <Link to="/">
