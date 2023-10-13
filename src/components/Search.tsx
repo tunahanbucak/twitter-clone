@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  InputAdornment,
-  TextField,
-  Typography,
-} from "@mui/material";
-import React, { useState } from "react";
+import { Box, InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function Search() {
@@ -34,7 +27,6 @@ export default function Search() {
               position="start"
               sx={{
                 paddingTop: 2.7,
-                // mt: 3,
               }}
             >
               <SearchIcon

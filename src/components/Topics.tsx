@@ -1,4 +1,3 @@
-// Topics.tsx
 import React from "react";
 import Agendas from "./Agendas";
 import { topics } from "../utils/consts";

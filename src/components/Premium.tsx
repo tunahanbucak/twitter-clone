@@ -1,5 +1,4 @@
 import { Box, Paper, Typography } from "@mui/material";
-import React from "react";
 import ButtonComponent from "./ButtonComponent";
 
 export default function Premium() {
@@ -51,7 +50,6 @@ export default function Premium() {
         <Box
           sx={{
             alignSelf: "start",
-            // mt: 1.7,
           }}
         >
           <ButtonComponent size="small">Abone Ol</ButtonComponent>

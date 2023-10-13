@@ -50,7 +50,7 @@ export default function Agendas({ title, children, more }: AgendasProps) {
             display: "flex",
             borderRadius: "0 0 1.25rem 1.25rem",
             alignItems: "center",
-            paddingX: 4,
+            paddingX: 2,
             textDecoration: "none",
             color: "1d9bf0",
             transition: "background-color 0.3s",

@@ -1,4 +1,3 @@
-import React from "react";
 import Agendas from "./Agendas";
 import { useAccounts } from "../store/hooks";
 import { whoFollowUsers } from "../utils/consts";

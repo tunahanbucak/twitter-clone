@@ -16,7 +16,7 @@ export default function ButtonComponent({
       size={size}
       sx={{
         background: "#1d9bf0",
-        borderRadius: "999px",
+        borderRadius: "9999px",
         width: {
           small: "30%",
           medium: "36px",
@@ -24,7 +24,7 @@ export default function ButtonComponent({
         }[size],
 
         height: {
-          small: "36px",
+          small: "2rem",
           medium: "36px",
           large: "52px",
         }[size],
@@ -32,7 +32,7 @@ export default function ButtonComponent({
         alignItems: "center",
         justifyContent: "center",
         padding: {
-          small: "0px 16px 0px 16px",
+          small: "0px 1rem 0px 1rem",
           medium: "0px 16px",
           large: "0px 32px",
         }[size],
@@ -44,7 +44,7 @@ export default function ButtonComponent({
       <Typography
         sx={{
           fontSize: {
-            small: "12px",
+            small: "0.85rem",
             medium: "16px",
             large: "17px",
           }[size],

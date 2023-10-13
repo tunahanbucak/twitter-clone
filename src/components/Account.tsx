@@ -1,21 +1,11 @@
-import {
-  Box,
-  Button,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  IconButton,
-} from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Popover from "@mui/material/Popover";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React, { useState } from "react";
 import { useAccounts } from "../store/hooks";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 
 export default function Account() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -158,14 +148,10 @@ export default function Account() {
           </Button>
           <Button
             sx={{
-              //  paddingLeft: "1rem",
               paddingRight: "1rem",
               height: "3.5rem",
-              //  ml: -4,
               width: "100%",
               transition: "bacgroundcolor 0.3s",
-              //display: "inline-flex",
-              // alignItems: "center",
               gap: "1.25rem",
               background: "black",
               "&:hover": {

@@ -2,23 +2,18 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Popover from "@mui/material/Popover";
-
 import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Box,
-  Divider,
   Link,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useState } from "react";
-import Accordionn from "./Accordionn";
-
 export default function More() {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
@@ -89,7 +84,6 @@ export default function More() {
               ml: 7,
               mt: 4,
               width: 318,
-              //  maxWidth: 318,
             }}
             {...bindPopover(popupState)}
             anchorOrigin={{
@@ -150,7 +144,6 @@ export default function More() {
                   Yer İşaretleri
                 </Typography>
               </Button>
-
               <Button
                 sx={{
                   height: "3.5rem",
@@ -195,14 +188,12 @@ export default function More() {
               <Button
                 sx={{
                   height: "3.5rem",
-
                   width: "100%",
                   transition: "bacgroundcolor 0.3s",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "1.25rem",
                   background: "black",
-
                   "&:hover": {
                     backgroundColor: " #5555",
                   },
@@ -239,7 +230,6 @@ export default function More() {
                   border: "1px solid rgb(47, 51, 54)",
                 }}
               ></Box>
-
               <Accordion
                 expanded={isOpen}
                 onChange={handleToggle}
@@ -417,7 +407,7 @@ export default function More() {
                       fontWeight: "500",
                       transition: "background-color 0.3s",
                       "&:hover": {
-                        backgroundColor: "rgb(85, 85, 85)", // Burada koyu gri rengin rgb değerini kullanın
+                        backgroundColor: "rgb(85, 85, 85)",
                       },
                     }}
                     href="/"

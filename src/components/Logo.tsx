@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Logo() {
@@ -13,7 +12,6 @@ export default function Logo() {
       <Link to="/">
         <Box
           sx={{
-            color: "var(--color-base)",
             width: "52px",
             height: "52px",
             borderRadius: "50%",
@@ -22,7 +20,7 @@ export default function Logo() {
             justifyContent: "center",
             transition: "background-color 0.3s",
             "&:hover": {
-              backgroundColor: "var(--background-third)",
+              backgroundColor: "#5555",
             },
           }}
         >
@@ -37,4 +35,3 @@ export default function Logo() {
     </Box>
   );
 }
-//currentColor

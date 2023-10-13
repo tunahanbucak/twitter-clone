@@ -325,17 +325,17 @@ export const topics = [
 export const whoFollowUsers = [
   {
     id: 3,
-    username: "BenKingNTU",
-    fullName: "Ben King",
+    username: "Engineermadam",
+    fullName: "madam.enginer",
     avatar:
-      "https://pbs.twimg.com/profile_images/1494092744687501315/9Cn1kdfK_x96.jpg",
+      "	https://pbs.twimg.com/profile_images/1356329071198822400/XxqWs40l_x96.jpg",
   },
   {
     id: 4,
-    username: "poondaYZY",
-    fullName: "TheLifeOfPoonda",
+    username: "developer",
+    fullName: "the developer",
     avatar:
-      "https://pbs.twimg.com/profile_images/1548313167733747714/aaOh8kQ4_x96.jpg",
+      "	https://pbs.twimg.com/profile_images/1553777284938620929/ieTlLQTE_x96.jpg",
   },
   {
     id: 5,

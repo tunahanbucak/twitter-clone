@@ -1,8 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import { Box, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
-
-import ButtonComponent from "./ButtonComponent";
 import More from "./More";
 import New from "./New";
 import { mainMenu } from "../utils/consts";
@@ -11,7 +8,6 @@ export default function Menu() {
   return (
     <Box
       sx={{
-        //mb: 4,
         ml: 1,
       }}
     >
@@ -32,7 +28,6 @@ export default function Menu() {
               sx={{
                 borderRadius: "99px",
                 "&:hover": {
-                  //      backgroundColor: isActive ? "#eff3f41a" : "initial",
                   width: "100%",
                   background: "#5555",
                 },
@@ -76,10 +71,8 @@ export default function Menu() {
                       {menu?.notification}
                     </Typography>
                   )}
-
                   {isActive ? menu.icon.passive : menu.icon.active}
                 </Box>
-
                 <Typography
                   sx={{
                     color: isActive ? "#fff" : "#e7e9ea",
@@ -95,7 +88,6 @@ export default function Menu() {
           )}
         </NavLink>
       ))}
-
       <More />
       <New />
     </Box>
