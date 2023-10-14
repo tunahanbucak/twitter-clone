@@ -1,7 +1,18 @@
-import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Popover, Typography } from "@mui/material";
+import React, { useState } from "react";
 
 export default function FooterMore() {
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
     <Box
       sx={{
@@ -22,7 +33,7 @@ export default function FooterMore() {
           display: "inline-flex",
           alignItems: "center",
         }}
-        // onClick={handleClick}
+        onClick={handleClick}
       >
         <Typography
           sx={{
@@ -45,6 +56,136 @@ export default function FooterMore() {
           />
         </svg>
       </Button>
+      <Popover
+        sx={{
+          "& .MuiPopover-paper": {
+            backgroundColor: "#1f2937", // Twitter's background color
+            color: "#ffffff", // Twitter's text color
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Box shadow
+          },
+        }}
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+      >
+        <Box
+          sx={{
+            padding: "12px 16px 12px 16px",
+            background: "black",
+            width: "100%",
+            height: 176,
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            boxShadow:
+              "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
+          }}
+        >
+          <Button
+            sx={{
+              display: "block",
+              marginBottom: 1,
+              width: "100%",
+              height: "1.5rem",
+              "&:hover": {
+                backgroundColor: "#5555",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                color: "rgb(231,233,234)",
+                fontWeight: 700,
+                fontSize: "15px",
+                lineHeight: "20px",
+                textTransform: "none",
+                textAlign: "left",
+              }}
+            >
+              Hakkında
+            </Typography>
+          </Button>
+          <Button
+            sx={{
+              display: "block",
+              marginBottom: 1,
+              width: "100%",
+              "&:hover": {
+                backgroundColor: "#5555",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                color: "rgb(231,233,234)",
+                fontWeight: 700,
+                fontSize: "15px",
+                lineHeight: "20px",
+                textTransform: "none",
+                textAlign: "left",
+              }}
+            >
+              Durum
+            </Typography>
+          </Button>
+          <Button
+            sx={{
+              display: "block",
+              marginBottom: 1,
+
+              width: "100%",
+              "&:hover": {
+                backgroundColor: "#5555",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                color: "rgb(231,233,234)",
+                fontWeight: 700,
+                fontSize: "15px",
+                lineHeight: "20px",
+                textAlign: "left",
+
+                textTransform: "none",
+              }}
+            >
+              İşletmeler için X
+            </Typography>
+          </Button>
+          <Button
+            sx={{
+              display: "block",
+              marginBottom: 1,
+
+              width: "100%",
+              "&:hover": {
+                backgroundColor: "#5555",
+              },
+            }}
+          >
+            <Typography
+              sx={{
+                color: "rgb(231,233,234)",
+                fontWeight: 700,
+                fontSize: "15px",
+                lineHeight: "20px",
+                textTransform: "none",
+                textAlign: "left",
+              }}
+            >
+              Geliştriciler
+            </Typography>
+          </Button>
+        </Box>
+      </Popover>
       <Typography
         sx={{
           paddingRight: "12px",
