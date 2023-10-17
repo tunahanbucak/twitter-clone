@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import More from "./More";
-import New from "./New";
 import { mainMenu } from "../utils/consts";
+import ButtonComponent from "./ButtonComponent";
 
 export default function Menu() {
   return (
@@ -28,7 +28,7 @@ export default function Menu() {
               sx={{
                 borderRadius: "99px",
                 "&:hover": {
-                  width: "100%",
+                  width: "169px",
                   background: "#5555",
                 },
               }}
@@ -89,7 +89,15 @@ export default function Menu() {
         </NavLink>
       ))}
       <More />
-      <New />
+      <Box
+        sx={{
+          paddingBottom: "6.3rem",
+          paddingTop: "1.2rem",
+          width: "90%",
+        }}
+      >
+        <ButtonComponent size="large">Gönder</ButtonComponent>
+      </Box>
     </Box>
   );
 }

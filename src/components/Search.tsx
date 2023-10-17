@@ -14,7 +14,6 @@ export default function SearchBar() {
   const handleClickAway = () => {
     setFocus(false);
   };
-
   return (
     <ClickAwayListener onClickAway={handleClickAway}>
       <Box

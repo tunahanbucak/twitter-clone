@@ -18,8 +18,6 @@ function Sidebar() {
         position: "sticky",
         top: "0",
         paddingLeft: 1,
-        //paddingTop: 1,
-        // mt: 1,
       }}
     >
       <Logo />
