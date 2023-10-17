@@ -59,9 +59,9 @@ export default function FooterMore() {
       <Popover
         sx={{
           "& .MuiPopover-paper": {
-            backgroundColor: "#1f2937", // Twitter's background color
-            color: "#ffffff", // Twitter's text color
-            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Box shadow
+            backgroundColor: "#1f2937",
+            color: "#ffffff",
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
           },
         }}
         id={id}
@@ -82,7 +82,7 @@ export default function FooterMore() {
             padding: "12px 16px 12px 16px",
             background: "black",
             width: "100%",
-            height: 176,
+            height: 146,
             border: "1px solid rgba(255, 255, 255, 0.2)",
             boxShadow:
               "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
@@ -93,7 +93,6 @@ export default function FooterMore() {
               display: "block",
               marginBottom: 1,
               width: "100%",
-              height: "1.5rem",
               "&:hover": {
                 backgroundColor: "#5555",
               },
@@ -115,6 +114,7 @@ export default function FooterMore() {
           <Button
             sx={{
               display: "block",
+
               marginBottom: 1,
               width: "100%",
               "&:hover": {

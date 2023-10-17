@@ -91,7 +91,7 @@ export default function SearchBar() {
         {focus && (
           <Box
             sx={{
-              border: "1px solid red",
+              border: "1px solid gray",
               position: "absolute",
               width: "100%",
               left: 0,
