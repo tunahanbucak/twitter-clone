@@ -13,6 +13,14 @@ export default function FooterMore() {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
+  const titles = [
+    "Hakkında",
+    "X uygulamasını indir",
+    "Durum",
+    "İşletmeler için X",
+    "Geliştiriciler",
+  ];
+
   return (
     <Box
       sx={{
@@ -59,40 +67,30 @@ export default function FooterMore() {
       <Popover
         sx={{
           "& .MuiPopover-paper": {
-            backgroundColor: "#1f2937",
-            color: "#ffffff",
-            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+            ml: -10,
+            mt: -3,
+            backgroundColor: "black",
+            maxHeight: "calc(100vh - 474.788px)",
+            width: "188.5px",
+            height: "225px",
+            maxWidth: "calc(384px)",
+            borderRadius: "12px",
+            position: "fixed",
+            boxShadow:
+              "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
           },
         }}
         id={id}
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
       >
-        <Box
-          sx={{
-            padding: "12px 16px 12px 16px",
-            background: "black",
-            width: "100%",
-            height: 146,
-            border: "1px solid rgba(255, 255, 255, 0.2)",
-            boxShadow:
-              "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
-          }}
-        >
+        {titles.map((title) => (
           <Button
             sx={{
-              display: "block",
-              marginBottom: 1,
+              justifyContent: "flex-start",
               width: "100%",
+              padding: "12px 16px 12px 16px",
               "&:hover": {
                 backgroundColor: "#5555",
               },
@@ -105,86 +103,14 @@ export default function FooterMore() {
                 fontSize: "15px",
                 lineHeight: "20px",
                 textTransform: "none",
-                textAlign: "left",
+                fontFamily:
+                  '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
               }}
             >
-              Hakkında
+              {title}
             </Typography>
           </Button>
-          <Button
-            sx={{
-              display: "block",
-
-              marginBottom: 1,
-              width: "100%",
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
-            }}
-          >
-            <Typography
-              sx={{
-                color: "rgb(231,233,234)",
-                fontWeight: 700,
-                fontSize: "15px",
-                lineHeight: "20px",
-                textTransform: "none",
-                textAlign: "left",
-              }}
-            >
-              Durum
-            </Typography>
-          </Button>
-          <Button
-            sx={{
-              display: "block",
-              marginBottom: 1,
-
-              width: "100%",
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
-            }}
-          >
-            <Typography
-              sx={{
-                color: "rgb(231,233,234)",
-                fontWeight: 700,
-                fontSize: "15px",
-                lineHeight: "20px",
-                textAlign: "left",
-
-                textTransform: "none",
-              }}
-            >
-              İşletmeler için X
-            </Typography>
-          </Button>
-          <Button
-            sx={{
-              display: "block",
-              marginBottom: 1,
-
-              width: "100%",
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
-            }}
-          >
-            <Typography
-              sx={{
-                color: "rgb(231,233,234)",
-                fontWeight: 700,
-                fontSize: "15px",
-                lineHeight: "20px",
-                textTransform: "none",
-                textAlign: "left",
-              }}
-            >
-              Geliştriciler
-            </Typography>
-          </Button>
-        </Box>
+        ))}
       </Popover>
       <Typography
         sx={{

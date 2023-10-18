@@ -94,85 +94,78 @@ export default function Account() {
       </Button>
       <Popover
         sx={{
-          mt: -9,
+          "& .MuiPopover-paper": {
+            mt: -8,
+            width: "300px",
+            minWidth: "260px",
+            minHeight: "30px",
+            maxWidth: "360px",
+            maxHeight: "480px",
+            overflow: "auto",
+            paddingBottom: "12px",
+            paddingTop: "12px",
+            background: "black",
+            boxShadow:
+              "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
+          },
         }}
         id={id}
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
       >
-        <Box
+        <Button
           sx={{
+            padding: "12px 16px 12px 16px",
+            width: "100%",
+            transition: "bacgroundcolor 0.3s",
+            justifyContent: "flex-start",
             background: "black",
-            width: 300,
-            height: 132,
-            border: "1px solid rgba(255, 255, 255, 0.2)",
-
-            boxShadow:
-              "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
+            "&:hover": {
+              backgroundColor: "#5555",
+            },
           }}
         >
-          <Button
+          <Typography
             sx={{
-              height: "3.5rem",
-              width: "100%",
-              transition: "bacgroundcolor 0.3s",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "1rem",
-              background: "black",
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
+              fontWeight: 700,
+              fontSize: "15px",
+              lineHeight: "20px",
+              color: "rgb(231, 233, 234)",
+              textTransform: "none",
+              fontFamily:
+                '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
             }}
           >
-            <Typography
-              sx={{
-                paddingRight: "5rem",
-                fontSize: "1rem",
-                color: "#ffffff",
-                textTransform: "none",
-                fontWeight: "bold",
-              }}
-            >
-              Var olan bir hesap ekle
-            </Typography>
-          </Button>
-          <Button
+            Var olan bir hesap ekle
+          </Typography>
+        </Button>
+        <Button
+          sx={{
+            paddingRight: "5rem",
+            width: "100%",
+            justifyContent: "flex-start",
+            transition: "bacgroundcolor 0.3s",
+            background: "black",
+            "&:hover": {
+              backgroundColor: "#5555",
+            },
+          }}
+        >
+          <Typography
             sx={{
-              paddingRight: "1rem",
-              height: "3.5rem",
-              width: "100%",
-              transition: "bacgroundcolor 0.3s",
-              gap: "1.25rem",
-              background: "black",
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
+              fontWeight: 700,
+              fontSize: "15px",
+              lineHeight: "20px",
+              color: "rgb(231, 233, 234)",
+              textTransform: "none",
+              fontFamily:
+                '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
             }}
           >
-            <Typography
-              sx={{
-                paddingRight: "2.1rem",
-                mt: 2,
-                fontSize: "1rem",
-                color: "#ffffff",
-                textTransform: "none",
-                fontWeight: "bold",
-              }}
-            >
-              @{account[0].username} hesabından çıkış yap
-            </Typography>
-          </Button>
-        </Box>
+            @{account[0].username} hesabından çıkış yap
+          </Typography>
+        </Button>
       </Popover>
     </Box>
   );

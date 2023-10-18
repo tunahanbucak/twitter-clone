@@ -118,90 +118,90 @@ export default function Topic({ item }: TopicsProps) {
       </Button>
       <Popover
         sx={{
-          position: "absolute",
-          top: 1,
-          ml: -24,
+          "& .MuiPopover-paper": {
+            maxWidth: "384px",
+            width: "382.475px",
+            height: "88px",
+            background: " black ",
+            position: "absolute",
+            mt: 1,
+            ml: -20,
+            boxShadow:
+              "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
+          },
         }}
         id={id}
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
       >
-        <Box
+        <Button
           sx={{
-            maxWidth: "384px",
-            width: "382.475px",
-            height: "88px",
-            background: " black ",
+            "&:hover": {
+              backgroundColor: "#5555",
+            },
+            transition: "color",
+            width: "100%",
+            display: "flex",
+            gap: 2,
+            mb: 1.3,
+            justifyContent: "flex-start",
           }}
         >
-          <Button
+          <svg
+            viewBox="0 0 24 24"
+            style={{ height: "1.25em", display: "inline-block" }}
+          >
+            <path
+              fill="rgb(231,233,234)"
+              d="M9.5 7c.828 0 1.5 1.119 1.5 2.5S10.328 12 9.5 12 8 10.881 8 9.5 8.672 7 9.5 7zm5 0c.828 0 1.5 1.119 1.5 2.5s-.672 2.5-1.5 2.5S13 10.881 13 9.5 13.672 7 14.5 7zM12 22.25C6.348 22.25 1.75 17.652 1.75 12S6.348 1.75 12 1.75 22.25 6.348 22.25 12 17.652 22.25 12 22.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25S16.549 3.75 12 3.75zM8.947 17.322l-1.896-.638C7.101 16.534 8.322 13 12 13s4.898 3.533 4.949 3.684l-1.897.633c-.031-.09-.828-2.316-3.051-2.316s-3.021 2.227-3.053 2.322z"
+            />
+          </svg>
+          <Typography
             sx={{
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
-              transition: "color",
-              width: "100%",
-              display: "flex",
-              gap: 2,
-              mb: 1.3,
-              justifyContent: "flex-start",
+              fontWeight: 700,
+              fontSize: "15px",
+              color: "rgb(231,233,234)",
+              lineHeight: "20px",
+              textTransform: "none",
+              mt: 1,
             }}
           >
-            <svg
-              viewBox="0 0 24 24"
-              style={{ height: "1.25em", display: "inline-block" }}
-            >
-              <path
-                fill="rgb(231,233,234)"
-                d="M9.5 7c.828 0 1.5 1.119 1.5 2.5S10.328 12 9.5 12 8 10.881 8 9.5 8.672 7 9.5 7zm5 0c.828 0 1.5 1.119 1.5 2.5s-.672 2.5-1.5 2.5S13 10.881 13 9.5 13.672 7 14.5 7zM12 22.25C6.348 22.25 1.75 17.652 1.75 12S6.348 1.75 12 1.75 22.25 6.348 22.25 12 17.652 22.25 12 22.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25S16.549 3.75 12 3.75zM8.947 17.322l-1.896-.638C7.101 16.534 8.322 13 12 13s4.898 3.533 4.949 3.684l-1.897.633c-.031-.09-.828-2.316-3.051-2.316s-3.021 2.227-3.053 2.322z"
-              />
-            </svg>
-            <Typography
-              sx={{
-                fontWeight: 700,
-                fontSize: "15px",
-                color: "rgb(231,233,234)",
-                lineHeight: "20px",
-                textTransform: "none",
-              }}
-            >
-              İlgimi çekmiyor
-            </Typography>
-          </Button>
-          <Button
+            İlgimi çekmiyor
+          </Typography>
+        </Button>
+        <Button
+          sx={{
+            "&:hover": {
+              backgroundColor: "#5555",
+            },
+            transition: "color",
+            width: "100%",
+            display: "flex",
+            gap: 2,
+          }}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            style={{ height: "1.172rem", display: "inline-block" }}
+          >
+            <path
+              fill="rgb(231,233,234)"
+              d="M9.5 7c.828 0 1.5 1.119 1.5 2.5S10.328 12 9.5 12 8 10.881 8 9.5 8.672 7 9.5 7zm5 0c.828 0 1.5 1.119 1.5 2.5s-.672 2.5-1.5 2.5S13 10.881 13 9.5 13.672 7 14.5 7zM12 22.25C6.348 22.25 1.75 17.652 1.75 12S6.348 1.75 12 1.75 22.25 6.348 22.25 12 17.652 22.25 12 22.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25S16.549 3.75 12 3.75zM8.947 17.322l-1.896-.638C7.101 16.534 8.322 13 12 13s4.898 3.533 4.949 3.684l-1.897.633c-.031-.09-.828-2.316-3.051-2.316s-3.021 2.227-3.053 2.322z"
+            />
+          </svg>
+          <Typography
             sx={{
-              "&:hover": {
-                backgroundColor: "#5555",
-              },
-              transition: "color",
-              width: "100%",
-              display: "flex",
-              gap: 2,
+              fontWeight: 700,
+              fontSize: "15px",
+              color: "rgb(231,233,234)",
+              lineHeight: "20px",
+              textTransform: "none",
             }}
           >
-            <svg
-              viewBox="0 0 24 24"
-              style={{ height: "1.172rem", display: "inline-block" }}
-            >
-              <path
-                fill="rgb(231,233,234)"
-                d="M9.5 7c.828 0 1.5 1.119 1.5 2.5S10.328 12 9.5 12 8 10.881 8 9.5 8.672 7 9.5 7zm5 0c.828 0 1.5 1.119 1.5 2.5s-.672 2.5-1.5 2.5S13 10.881 13 9.5 13.672 7 14.5 7zM12 22.25C6.348 22.25 1.75 17.652 1.75 12S6.348 1.75 12 1.75 22.25 6.348 22.25 12 17.652 22.25 12 22.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25S16.549 3.75 12 3.75zM8.947 17.322l-1.896-.638C7.101 16.534 8.322 13 12 13s4.898 3.533 4.949 3.684l-1.897.633c-.031-.09-.828-2.316-3.051-2.316s-3.021 2.227-3.053 2.322z"
-              />
-            </svg>
-            <Typography
-              sx={{
-                fontWeight: 700,
-                fontSize: "15px",
-                color: "rgb(231,233,234)",
-                lineHeight: "20px",
-                textTransform: "none",
-              }}
-            >
-              Bu gündem başlığı zararlı veya spam içeriyor
-            </Typography>
-          </Button>
-        </Box>
+            Bu gündem başlığı zararlı veya spam içeriyor
+          </Typography>
+        </Button>
       </Popover>
     </Link>
   );
