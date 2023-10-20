@@ -28,13 +28,6 @@ const initialState: AuthState = {
       avatar:
         "https://pbs.twimg.com/profile_images/1645080789472665601/i0Uwo_sL_400x400.jpg",
     },
-    {
-      id: 2,
-      username: "tayfunerbilen",
-      fullName: "Tayfun Erbilen",
-      avatar:
-        "https://pbs.twimg.com/profile_images/1665642354009677824/LNZo7V8x_400x400.jpg",
-    },
   ],
 };
 
@@ -42,7 +35,6 @@ const auth = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    ///
     _addAccount: (state, action) => {
       state.accounts.push(action.payload);
     },

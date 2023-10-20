@@ -32,7 +32,7 @@ export default function FooterMore() {
     >
       <Button
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           outline: "none",
 
           "&:hover": {
@@ -53,11 +53,7 @@ export default function FooterMore() {
         >
           Daha fazla
         </Typography>
-        <svg
-          viewBox="0 0 24 24"
-          style={{ height: "1em", paddingLeft: 2 }}
-          className="h-[1em] px-0.5"
-        >
+        <svg viewBox="0 0 24 24" style={{ height: "1em", paddingLeft: 2 }}>
           <path
             fill="currentColor"
             d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
@@ -69,7 +65,7 @@ export default function FooterMore() {
           "& .MuiPopover-paper": {
             ml: -10,
             mt: -3,
-            backgroundColor: "black",
+            background: " var(--background-primary)",
             maxHeight: "calc(100vh - 474.788px)",
             width: "188.5px",
             height: "225px",
@@ -92,7 +88,7 @@ export default function FooterMore() {
               width: "100%",
               padding: "12px 16px 12px 16px",
               "&:hover": {
-                backgroundColor: "#5555",
+                backgroundColor: "var(--background-secondary)",
               },
             }}
           >
@@ -118,7 +114,7 @@ export default function FooterMore() {
           lineHeight: "16px",
           fontSize: "13px",
           fontWeight: 400,
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           mt: 0.7,
         }}
       >

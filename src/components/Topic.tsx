@@ -36,7 +36,7 @@ export default function Topic({ item }: TopicsProps) {
         px: 2,
         transition: "colors",
         "&:hover": {
-          backgroundColor: "#5555",
+          backgroundColor: "var(--background-third)",
         },
         position: "relative",
       }}
@@ -49,7 +49,7 @@ export default function Topic({ item }: TopicsProps) {
               lineHeight: "16px",
               fontSize: "13px",
               fontWeight: 400,
-              color: "#71767b",
+              color: "var(--color-base-secondary)",
             }}
           >
             {item.title}
@@ -60,7 +60,7 @@ export default function Topic({ item }: TopicsProps) {
               fontSize: "15px",
               fontWeight: 700,
               lineHeight: "20px",
-              color: "#e7e9ea",
+              color: "var(--color-base)",
             }}
           >
             {item.topic.type === "tag" && "#"}
@@ -71,7 +71,7 @@ export default function Topic({ item }: TopicsProps) {
           <Box>
             <Typography
               sx={{
-                color: "#71767b",
+                color: "var(--color-base-secondary)",
                 mt: 0.7,
                 lineHeight: "16px",
                 fontSize: "13px",
@@ -90,7 +90,7 @@ export default function Topic({ item }: TopicsProps) {
           borderRadius: "9999px",
           width: "34.75px",
           height: "34.75px",
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           display: "inline-flex",
           right: "-1.2rem",
           alignItems: "center",
@@ -122,7 +122,7 @@ export default function Topic({ item }: TopicsProps) {
             maxWidth: "384px",
             width: "382.475px",
             height: "88px",
-            background: " black ",
+            background: " var(--background-primary) ",
             position: "absolute",
             mt: 1,
             ml: -20,
@@ -138,7 +138,7 @@ export default function Topic({ item }: TopicsProps) {
         <Button
           sx={{
             "&:hover": {
-              backgroundColor: "#5555",
+              backgroundColor: "var(--background-secondary)",
             },
             transition: "color",
             width: "100%",
@@ -153,7 +153,7 @@ export default function Topic({ item }: TopicsProps) {
             style={{ height: "1.25em", display: "inline-block" }}
           >
             <path
-              fill="rgb(231,233,234)"
+              fill="currentColor"
               d="M9.5 7c.828 0 1.5 1.119 1.5 2.5S10.328 12 9.5 12 8 10.881 8 9.5 8.672 7 9.5 7zm5 0c.828 0 1.5 1.119 1.5 2.5s-.672 2.5-1.5 2.5S13 10.881 13 9.5 13.672 7 14.5 7zM12 22.25C6.348 22.25 1.75 17.652 1.75 12S6.348 1.75 12 1.75 22.25 6.348 22.25 12 17.652 22.25 12 22.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25S16.549 3.75 12 3.75zM8.947 17.322l-1.896-.638C7.101 16.534 8.322 13 12 13s4.898 3.533 4.949 3.684l-1.897.633c-.031-.09-.828-2.316-3.051-2.316s-3.021 2.227-3.053 2.322z"
             />
           </svg>
@@ -161,7 +161,7 @@ export default function Topic({ item }: TopicsProps) {
             sx={{
               fontWeight: 700,
               fontSize: "15px",
-              color: "rgb(231,233,234)",
+              color: "var(--color-base)",
               lineHeight: "20px",
               textTransform: "none",
               mt: 1,
@@ -173,7 +173,7 @@ export default function Topic({ item }: TopicsProps) {
         <Button
           sx={{
             "&:hover": {
-              backgroundColor: "#5555",
+              backgroundColor: "var(--background-secondary)",
             },
             transition: "color",
             width: "100%",
@@ -186,7 +186,7 @@ export default function Topic({ item }: TopicsProps) {
             style={{ height: "1.172rem", display: "inline-block" }}
           >
             <path
-              fill="rgb(231,233,234)"
+              fill="currentColor"
               d="M9.5 7c.828 0 1.5 1.119 1.5 2.5S10.328 12 9.5 12 8 10.881 8 9.5 8.672 7 9.5 7zm5 0c.828 0 1.5 1.119 1.5 2.5s-.672 2.5-1.5 2.5S13 10.881 13 9.5 13.672 7 14.5 7zM12 22.25C6.348 22.25 1.75 17.652 1.75 12S6.348 1.75 12 1.75 22.25 6.348 22.25 12 17.652 22.25 12 22.25zm0-18.5c-4.549 0-8.25 3.701-8.25 8.25s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25S16.549 3.75 12 3.75zM8.947 17.322l-1.896-.638C7.101 16.534 8.322 13 12 13s4.898 3.533 4.949 3.684l-1.897.633c-.031-.09-.828-2.316-3.051-2.316s-3.021 2.227-3.053 2.322z"
             />
           </svg>
@@ -194,7 +194,7 @@ export default function Topic({ item }: TopicsProps) {
             sx={{
               fontWeight: 700,
               fontSize: "15px",
-              color: "rgb(231,233,234)",
+              color: "var(--color-base)",
               lineHeight: "20px",
               textTransform: "none",
             }}

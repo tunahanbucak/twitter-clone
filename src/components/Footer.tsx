@@ -32,7 +32,7 @@ export default function Footer() {
       <Link
         href=""
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
 
           textDecoration: "none",
           "&:hover": { textDecoration: "underline" },
@@ -52,7 +52,7 @@ export default function Footer() {
       <Link
         href="/"
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           textDecoration: "none",
 
           "&:hover": { textDecoration: "underline" },
@@ -72,7 +72,7 @@ export default function Footer() {
       <Link
         href="/"
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           textDecoration: "none",
 
           "&:hover": { textDecoration: "underline" },
@@ -92,7 +92,7 @@ export default function Footer() {
       <Link
         href="/"
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           textDecoration: "none",
 
           "&:hover": { textDecoration: "underline" },
@@ -112,7 +112,7 @@ export default function Footer() {
       <Link
         href="/"
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           textDecoration: "none",
 
           "&:hover": { textDecoration: "underline" },
@@ -132,7 +132,7 @@ export default function Footer() {
       <Link
         href="/"
         sx={{
-          color: "#71767b",
+          color: "var(--color-base-secondary)",
           textDecoration: "none",
 
           "&:hover": { textDecoration: "underline" },

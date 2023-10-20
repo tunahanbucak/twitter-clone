@@ -9,22 +9,22 @@ const IconButton = ({ icon, title }: IconButtonProps) => {
   return (
     <Button
       sx={{
-        height: "3.5rem",
+        maxWidth: "100%",
         width: "100%",
-        transition: "bacgroundcolor 0.3s",
         display: "inline-flex",
-        alignItems: "flex-start",
         gap: "1rem",
-        background: "black",
+        background: " var(--background-primary)",
+        padding: "12px 16px 12px 16px",
+        justifyContent: "flex-start",
         "&:hover": {
-          backgroundColor: "#5555",
+          backgroundColor: "var(--background-secondary)",
         },
       }}
     >
       <Box
         sx={{
-          width: "26.25px",
-          height: "26.25px",
+          width: "24px",
+          height: "24px",
           position: "relative",
         }}
       >
@@ -34,7 +34,7 @@ const IconButton = ({ icon, title }: IconButtonProps) => {
         sx={{
           paddingRight: "1rem",
           fontSize: "1.25rem",
-          color: "#ffffff",
+          color: "var(--color-base)",
           textTransform: "none",
           fontWeight: "bold",
         }}

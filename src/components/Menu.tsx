@@ -26,10 +26,11 @@ export default function Menu() {
           {({ isActive }) => (
             <Box
               sx={{
-                borderRadius: "99px",
+                color: "var(--color-base)",
+                borderRadius: "9999px",
                 "&:hover": {
                   width: "169px",
-                  background: "#5555",
+                  backgroundColor: "var(--background-third)",
                 },
               }}
             >
@@ -57,8 +58,9 @@ export default function Menu() {
                       sx={{
                         width: 18,
                         height: 18,
+                        color: "var(--background-primary)",
                         borderRadius: "50%",
-                        background: "#1d9bf0",
+                        background: "var(--color-primary)",
                         position: "absolute",
                         top: -6,
                         right: -4,
@@ -75,7 +77,7 @@ export default function Menu() {
                 </Box>
                 <Typography
                   sx={{
-                    color: isActive ? "#fff" : "#e7e9ea",
+                    color: isActive ? "var(--color-base)" : "var(--color-base)",
                     fontSize: "1.25rem",
                     paddingRight: "16px",
                     fontWeight: isActive ? "bold" : "normal",
@@ -88,7 +90,17 @@ export default function Menu() {
           )}
         </NavLink>
       ))}
-      <More />
+      <Box
+        sx={{
+          borderRadius: "9999px",
+          "&:hover": {
+            width: "189px",
+            backgroundColor: "var(--background-third)",
+          },
+        }}
+      >
+        <More />
+      </Box>
       <Box
         sx={{
           paddingBottom: "6.3rem",

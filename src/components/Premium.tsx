@@ -5,10 +5,10 @@ export default function Premium() {
   return (
     <Paper
       sx={{
-        backgroundColor: "rgb(22,24,28)",
+        backgroundColor: "var(--background-secondary)",
         marginBottom: "1rem",
         borderRadius: "1.25rem",
-        border: "1px solid rgb(22,24,28)",
+        border: "1px solid var(--background-secondary)",
         position: "relative",
         display: "flex",
         flexDirection: "column",
@@ -28,8 +28,10 @@ export default function Premium() {
             fontSize: "1.5rem",
             fontWeight: "bold",
             lineHeight: "1.5",
-            color: "rgb(231,233,234)",
+            color: "var(--color-base)",
             mt: -1,
+            fontFamily:
+              '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
           }}
         >
           Premium'a Abone Ol
@@ -37,7 +39,7 @@ export default function Premium() {
         <Typography
           sx={{
             lineHeight: "1.5rem",
-            color: "rgb(231,233,234)",
+            color: "var(--color-base)",
             fontWeight: "bold",
             fontSize: "0.94rem",
             mt: 0.5,

@@ -10,9 +10,9 @@ export default function Agendas({ title, children, more }: AgendasProps) {
   return (
     <Paper
       sx={{
-        backgroundColor: "rgb(22,24,28)",
+        backgroundColor: "var(--background-secondary)",
         borderRadius: "1.25rem",
-        border: "1px solid rgb(22,24,28)",
+        border: "1px solid var(--background-secondary)",
         position: "relative",
         display: "flex",
         flexDirection: "column",
@@ -27,7 +27,7 @@ export default function Agendas({ title, children, more }: AgendasProps) {
           fontWeight: "bold",
           display: "flex",
           alignItems: "center",
-          color: "#e7e9ea",
+          color: "var(--color-base)",
           mb: 0.3,
         }}
       >

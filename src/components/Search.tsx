@@ -27,7 +27,7 @@ export default function SearchBar() {
           sx={{
             position: "relative",
             borderRadius: "999px",
-            backgroundColor: "rgb(22,24,28)",
+            backgroundColor: "var(--background-third)",
             marginLeft: -1,
             width: "100%",
             border: focus ? "1px solid #1d9bf0" : "none",
@@ -42,7 +42,7 @@ export default function SearchBar() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: focus ? "#1d9bf0" : "none",
+              color: focus ? "#1d9bf0" : "var(--color-base-secondary)",
             }}
           >
             <SearchIcon />
@@ -90,26 +90,30 @@ export default function SearchBar() {
         {focus && (
           <Box
             sx={{
-              border: "1px solid gray",
+              minHeight: "100px",
+              maxHeight: "calc(80vh - 53px)",
               position: "absolute",
               width: "100%",
-              left: 0,
-              top: "100%",
-              p: 2,
+              height: 100,
               borderRadius: "8px",
-              backgroundColor: "black",
-              boxShadow: (theme) =>
-                theme.palette.mode === "dark"
-                  ? theme.shadows[3]
-                  : "0px 4px 4px rgba(0, 0, 0, 0.25)",
+              background: " var(--background-primary)",
+              boxShadow:
+                "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
+
               zIndex: 1,
             }}
           >
             <Typography
               sx={{
                 color: "var(--color-base-secondary)",
-                fontSize: "16px",
-                lineHeight: "1.25",
+                fontSize: "15px",
+                fontWeight: 400,
+                lineHeight: "20px",
+                fontFamily:
+                  '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
+                padding: "12px",
+                paddingTop: "20px",
+                textAlign: "center",
               }}
             >
               Kişileri, listeleri veya anahtar kelimeleri aramayı dene

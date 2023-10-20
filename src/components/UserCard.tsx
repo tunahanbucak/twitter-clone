@@ -43,7 +43,7 @@ export default function UserCard({ user }: UserCardProps) {
           <Typography
             sx={{
               lineHeight: "1.25rem",
-              color: "#e7e9ea",
+              color: "var(--color-base)",
               fontWeight: 700,
               fontSize: "14px",
               textOverflow: "ellipsis",
@@ -55,7 +55,7 @@ export default function UserCard({ user }: UserCardProps) {
           </Typography>
           <Typography
             sx={{
-              color: "#71767b",
+              color: "var(--color-base-secondary)",
               textOverflow: "ellipsis",
               overflow: "hidden",
               lineHeight: "20px",

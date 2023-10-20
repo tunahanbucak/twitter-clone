@@ -1,5 +1,5 @@
 import Agendas from "./Agendas";
-import { useAccounts } from "../store/hooks";
+import { useAccounts } from "../store/auth/hooks";
 import { whoFollowUsers } from "../utils/consts";
 import UserCard from "./UserCard";
 import { Box } from "@mui/material";

@@ -1,9 +1,12 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import authReducer from "./auth"; // auth reducer'ının yolu
+import authReducer from "./auth/auth";
+import modal from "./modal";
+import appearance from "./appearance";
 
 const rootReducer = combineReducers({
   auth: authReducer,
-  // Diğer slicelar burada olur...
+  modal,
+  appearance,
 });
 
 export type RootStateType = ReturnType<typeof rootReducer>;

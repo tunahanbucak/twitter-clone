@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import Popover from "@mui/material/Popover";
 import React, { useState } from "react";
-import { useAccounts } from "../store/hooks";
+import { useAccounts } from "../store//auth/hooks";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 
 export default function Account() {
@@ -63,7 +63,7 @@ export default function Account() {
             <Typography
               sx={{
                 fontSize: "15px",
-                color: "#E7E9EA",
+                color: "var(--color-base)",
                 fontWeight: "bold",
                 textTransform: "none",
                 alignItems: "center",
@@ -75,7 +75,7 @@ export default function Account() {
             <Typography
               sx={{
                 fontSize: "15px",
-                color: "#71767B",
+                color: "var(--color-base-secondary)",
                 fontWeight: "bold",
                 textTransform: "none",
               }}
@@ -95,8 +95,10 @@ export default function Account() {
       <Popover
         sx={{
           "& .MuiPopover-paper": {
-            mt: -8,
+            mt: -10,
+            ml: -3,
             width: "300px",
+            height: "112px",
             minWidth: "260px",
             minHeight: "30px",
             maxWidth: "360px",
@@ -104,7 +106,8 @@ export default function Account() {
             overflow: "auto",
             paddingBottom: "12px",
             paddingTop: "12px",
-            background: "black",
+            background: " var(--background-primary)",
+            borderRadius: "16px",
             boxShadow:
               "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
           },
@@ -116,11 +119,14 @@ export default function Account() {
       >
         <Button
           sx={{
-            padding: "12px 16px 12px 16px",
+            paddingBottom: "12px",
+            paddingTop: "12px",
+            paddingRight: "16px",
+            paddingLeft: "20px",
             width: "100%",
             transition: "bacgroundcolor 0.3s",
             justifyContent: "flex-start",
-            background: "black",
+            background: " var(--background-primary)",
             "&:hover": {
               backgroundColor: "#5555",
             },
@@ -142,11 +148,15 @@ export default function Account() {
         </Button>
         <Button
           sx={{
-            paddingRight: "5rem",
+            paddingBottom: "12px",
+            paddingTop: "12px",
+            paddingRight: "40px",
+            paddingLeft: "16px",
             width: "100%",
-            justifyContent: "flex-start",
             transition: "bacgroundcolor 0.3s",
-            background: "black",
+            justifyContent: "flex-start",
+            background: " var(--background-primary)",
+            flexShrink: 1,
             "&:hover": {
               backgroundColor: "#5555",
             },
@@ -155,6 +165,7 @@ export default function Account() {
           <Typography
             sx={{
               fontWeight: 700,
+
               fontSize: "15px",
               lineHeight: "20px",
               color: "rgb(231, 233, 234)",
