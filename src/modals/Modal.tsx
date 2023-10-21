@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { useModal } from "../store/modal/hooks";
 import modals from "./modals";
+import { removeModal } from "../store/modal/action";
 
 export default function Modal() {
   const modal = useModal();
@@ -8,7 +9,7 @@ export default function Modal() {
   return (
     <Box
       sx={{
-        background: "rgba(91, 112, 131, 0.4)",
+        background: "var(--background-modal)",
         position: "fixed",
         inset: 0,
         display: "flex",
@@ -19,14 +20,14 @@ export default function Modal() {
     >
       <Box
         sx={{
-          background: "black",
+          background: "var(--background-primary)",
           maxWidth: "600px",
           maxHeight: "90vh",
           overflow: "auto",
           borderRadius: "16px",
         }}
       >
-        {currentModal && <currentModal.element />}
+        {currentModal && <currentModal.element close={removeModal} />}
       </Box>
     </Box>
   );

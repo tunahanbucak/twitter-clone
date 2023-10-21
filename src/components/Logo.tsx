@@ -9,7 +9,12 @@ export default function Logo() {
         mt: -1.0,
       }}
     >
-      <Link to="/">
+      <Link
+        to="/"
+        style={{
+          color: "var(--color-base)",
+        }}
+      >
         <Box
           sx={{
             width: "52px",
@@ -20,7 +25,7 @@ export default function Logo() {
             justifyContent: "center",
             transition: "background-color 0.3s",
             "&:hover": {
-              backgroundColor: "#5555",
+              backgroundColor: "var(--background-third)",
             },
           }}
         >

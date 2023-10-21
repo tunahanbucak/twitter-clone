@@ -150,7 +150,11 @@ export default function Topic({ item }: TopicsProps) {
         >
           <svg
             viewBox="0 0 24 24"
-            style={{ height: "1.25em", display: "inline-block" }}
+            style={{
+              height: "1.25em",
+              display: "inline-block",
+              color: "var(--color-base)",
+            }}
           >
             <path
               fill="currentColor"
@@ -183,7 +187,11 @@ export default function Topic({ item }: TopicsProps) {
         >
           <svg
             viewBox="0 0 24 24"
-            style={{ height: "1.172rem", display: "inline-block" }}
+            style={{
+              height: "1.172rem",
+              display: "inline-block",
+              color: "var(--color-base)",
+            }}
           >
             <path
               fill="currentColor"

@@ -1,91 +1,106 @@
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
+import MuiAccordionSummary, {
+  AccordionSummaryProps,
+} from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 import { useState } from "react";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Typography,
-  Link,
-  Box,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { AccordionDetails, AccordionSummary, Box } from "@mui/material";
 import MoreSettings from "./MoreSettings";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface Props {
   title: string;
   content: string;
   path: string;
 }
+const Accordion = styled((props: AccordionProps) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  "&:not(:last-child)": {
+    borderBottom: 0,
+  },
+  "&:before": {
+    display: "none",
+  },
+}));
+
 function CustomAccordion({ title, content, path }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <Accordion
-      expanded={isOpen}
-      onChange={handleToggle}
-      sx={{
-        background: " var(--background-primary)",
-      }}
-    >
-      <AccordionSummary
+    <div>
+      <Accordion
+        expanded={isOpen}
+        onChange={handleToggle}
         sx={{
-          "&:hover": {
-            backgroundColor: " var(--background-secondary)",
-          },
+          background: " var(--background-primary)",
         }}
-        expandIcon={
-          <ExpandMoreIcon
-            sx={{
-              color: isOpen ? " var(--color-primary)" : "var(--color-base)",
-            }}
-          />
-        }
-        aria-controls="panel1a-content"
-        id="panel1a-header"
       >
-        <Typography
+        <AccordionSummary
+          expandIcon={
+            <ExpandMoreIcon
+              sx={{
+                color: isOpen ? " var(--color-primary)" : "var(--color-base)",
+              }}
+            />
+          }
           sx={{
-            fontSize: "15px",
-            color: "var(--color-base)",
-            textTransform: "none",
-            fontWeight: "bold",
-            fontFamily: "inherit",
+            "&:hover": {
+              backgroundColor: " var(--background-secondary)",
+            },
+          }}
+          aria-controls="panel1d-content"
+          id="panel1d-header"
+        >
+          <Typography
+            sx={{
+              fontSize: "15px",
+              color: "var(--color-base)",
+              textTransform: "none",
+              fontWeight: "bold",
+              fontFamily: "inherit",
+            }}
+          >
+            {title}
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails
+          sx={{
+            "&:hover": {
+              backgroundColor: "var(--background-secondary)",
+            },
           }}
         >
-          {title}
-        </Typography>
-      </AccordionSummary>
-      <AccordionDetails
-        sx={{
-          "&:hover": {
-            backgroundColor: " #5555",
-          },
-        }}
-      >
-        {content && (
-          <Link
-            sx={{
-              textDecoration: "none",
-              display: "flex",
-              color: "var(--color-base)",
-              alignItems: "center",
-              paddingLeft: "0.75rem",
-              paddingRight: "0.75rem",
-              gap: "0.75rem",
-              fontSize: "15px",
-              fontWeight: 500,
-            }}
-            href="/"
-          >
-            <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
-              <path fill="currentColor" d={path}></path>
-            </svg>
-            <Typography>{content}</Typography>
-          </Link>
-        )}
-      </AccordionDetails>
-    </Accordion>
+          {content && (
+            <Link
+              sx={{
+                textDecoration: "none",
+                display: "flex",
+                color: "var(--color-base)",
+                alignItems: "center",
+                paddingLeft: "0.75rem",
+                paddingRight: "0.75rem",
+                gap: "0.75rem",
+                fontSize: "15px",
+                fontWeight: 500,
+              }}
+              href="/"
+            >
+              <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+                <path fill="currentColor" d={path}></path>
+              </svg>
+              <Typography>{content}</Typography>
+            </Link>
+          )}
+        </AccordionDetails>
+      </Accordion>
+    </div>
   );
 }
 export default function MoreAccordion() {

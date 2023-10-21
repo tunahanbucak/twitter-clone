@@ -28,7 +28,7 @@ export default function Account() {
           cursor: "pointer",
           borderRadius: "999px",
           "&:hover": {
-            backgroundColor: "#5555",
+            backgroundColor: "var(--background-third)",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
           },
           width: "full",
@@ -76,7 +76,7 @@ export default function Account() {
               sx={{
                 fontSize: "15px",
                 color: "var(--color-base-secondary)",
-                fontWeight: "bold",
+
                 textTransform: "none",
               }}
             >
@@ -88,6 +88,7 @@ export default function Account() {
               alignItems: "center",
               justifyContent: "center",
               mt: 1,
+              color: "var(--color-base)",
             }}
           />
         </Box>
@@ -106,7 +107,7 @@ export default function Account() {
             overflow: "auto",
             paddingBottom: "12px",
             paddingTop: "12px",
-            background: " var(--background-primary)",
+            backgroundColor: " var(--background-primary)",
             borderRadius: "16px",
             boxShadow:
               "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1px",
@@ -128,7 +129,7 @@ export default function Account() {
             justifyContent: "flex-start",
             background: " var(--background-primary)",
             "&:hover": {
-              backgroundColor: "#5555",
+              backgroundColor: "var(--background-secondary)",
             },
           }}
         >
@@ -137,7 +138,7 @@ export default function Account() {
               fontWeight: 700,
               fontSize: "15px",
               lineHeight: "20px",
-              color: "rgb(231, 233, 234)",
+              color: "var(--color-base)",
               textTransform: "none",
               fontFamily:
                 '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',
@@ -158,17 +159,16 @@ export default function Account() {
             background: " var(--background-primary)",
             flexShrink: 1,
             "&:hover": {
-              backgroundColor: "#5555",
+              backgroundColor: "var(--background-secondary)",
             },
           }}
         >
           <Typography
             sx={{
               fontWeight: 700,
-
               fontSize: "15px",
               lineHeight: "20px",
-              color: "rgb(231, 233, 234)",
+              color: "var(--color-base)",
               textTransform: "none",
               fontFamily:
                 '"TwitterChirp",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif',

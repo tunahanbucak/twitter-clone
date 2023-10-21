@@ -20,7 +20,9 @@ export default function SearchBar() {
         sx={{
           mb: 2,
           mt: 1,
+          ml: 1,
           position: "relative",
+          width: "350px",
         }}
       >
         <Box

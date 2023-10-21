@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 interface RootState {
   appearance: {
-    boxShadow(arg0: string, boxShadow: any): unknown;
+    boxShadow: string;
     fontSize(arg0: string, fontSize: any): unknown;
     color: any;
     backgroundColor: any;

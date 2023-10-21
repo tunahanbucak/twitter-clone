@@ -1,7 +1,17 @@
-import { Box, Link, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Link, Typography } from "@mui/material";
+import { useAppearance } from "../store/appearance/hooks";
+import {
+  setBackgroundColor,
+  setBoxShadow,
+  setColor,
+} from "../store/appearance/actions";
 
-export default function AppearanceModal() {
+interface ModalProps {
+  close: () => void;
+}
+
+export default function AppearanceModal({ close }: ModalProps) {
+  const { backgroundColor, color } = useAppearance();
   return (
     <Box
       sx={{
@@ -40,7 +50,7 @@ export default function AppearanceModal() {
       >
         <Box
           sx={{
-            border: "1px solid #2f3336",
+            border: "1px solid var(--background-third)",
             padding: "1rem",
             display: "flex",
             paddingTop: "0.75rem",
@@ -114,7 +124,7 @@ export default function AppearanceModal() {
                 fontSize: "15px",
                 lineHeight: "20px",
                 fontWeight: 400,
-                color: "#e7e9ea",
+                color: "var(--color-base)",
               }}
             >
               X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
@@ -133,6 +143,165 @@ export default function AppearanceModal() {
             </Typography>
           </Box>
         </Box>
+      </Box>
+      <Box>
+        <Typography
+          sx={{
+            color: "var(--color-base-secondary)",
+            fontSize: "13px",
+            lineHeight: "20px",
+            fontWeight: "bold",
+            mb: "4px",
+          }}
+        >
+          Arka plan
+        </Typography>
+        <Box
+          sx={{
+            paddingLeft: "12px",
+            paddingRight: "12px",
+            paddingTop: "4px",
+            paddingBottom: "4px",
+            mb: "12px",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            background: "var(--background-secondary)",
+            borderRadius: "16px",
+            gap: "4px",
+          }}
+        >
+          <Button
+            onClick={() => {
+              setColor({
+                ...color,
+                base: "#0f1419",
+                baseSecondary: "#536471",
+              });
+
+              setBackgroundColor({
+                name: "light",
+                primary: "#fff",
+                secondary: "#f7f9f9",
+                third: "#eff3f4",
+                modal: "#00000066",
+              });
+              setBoxShadow(
+                "rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px"
+              );
+            }}
+            sx={{
+              height: "64px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+              background: "white",
+              borderRadius: "4px",
+              ...(backgroundColor.name === "light" && {
+                borderColor: "var(--color-primary)",
+                border: "2px solid",
+              }),
+            }}
+          >
+            <Typography
+              sx={{
+                textTransform: "none",
+                color: "#0f1419",
+              }}
+            >
+              Varsayılan
+            </Typography>
+          </Button>
+          <Button
+            onClick={() => {
+              setColor({
+                ...color,
+                base: "#f7f9f9",
+                baseSecondary: "#8b98a5",
+              });
+
+              setBackgroundColor({
+                name: "dark",
+                primary: "#15202b",
+                secondary: "#1e2732",
+                third: "#263340",
+                modal: "#5b708366",
+              });
+              setBoxShadow(
+                "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1pxs"
+              );
+            }}
+            sx={{
+              height: "64px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+              background: "#15202b",
+              borderRadius: "4px",
+              ...(backgroundColor.name === "dark" && {
+                borderColor: "var(--color-primary)",
+                border: "2px solid",
+              }),
+            }}
+          >
+            <Typography
+              sx={{
+                textTransform: "none",
+                color: "#f7f9f9",
+              }}
+            >
+              Loş
+            </Typography>
+          </Button>
+          <Button
+            onClick={() => {
+              setColor({
+                ...color,
+                base: "#e7e9ea",
+                baseSecondary: "#71767b",
+              });
+              setBackgroundColor({
+                name: "darker",
+                primary: "#000000",
+                secondary: "#16181c",
+                third: "#212327",
+                modal: "#5b708366",
+              });
+              setBoxShadow(
+                "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1pxs"
+              );
+            }}
+            sx={{
+              height: "64px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+              background: "black",
+              borderRadius: "4px",
+              ...(backgroundColor.name === "darker" && {
+                borderColor: "var(--color-primary)",
+                border: "2px solid",
+              }),
+            }}
+          >
+            <Typography
+              sx={{
+                textTransform: "none",
+                color: "#f7f9f9",
+              }}
+            >
+              Işıklar kapalı
+            </Typography>
+          </Button>
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+        }}
+      >
+        <Button onClick={close} variant="outlined">
+          {" "}
+          Bitti
+        </Button>
       </Box>
     </Box>
   );

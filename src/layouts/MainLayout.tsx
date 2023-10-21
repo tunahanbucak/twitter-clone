@@ -29,7 +29,10 @@ export default function MainLayout({ children }: Props) {
       "--background-third",
       appearance.backgroundColor.third
     );
-    //	document.documentElement.style.setProperty('--background-modal', appearance.backgroundColor.modal)
+    document.documentElement.style.setProperty(
+      "--background-modal",
+      appearance.backgroundColor.modal
+    );
 
     document.documentElement.style.setProperty(
       "--color-primary",
@@ -49,7 +52,10 @@ export default function MainLayout({ children }: Props) {
       appearance.color.baseSecondary
     );
 
-    // document.documentElement.style.setProperty('--box-shadow', appearance.boxShadow)
+    document.documentElement.style.setProperty(
+      "--box-shadow",
+      appearance.boxShadow
+    );
 
     document.documentElement.style.setProperty(
       "--font-size",

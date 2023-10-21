@@ -94,7 +94,8 @@ export default function FooterMore() {
           >
             <Typography
               sx={{
-                color: "rgb(231,233,234)",
+                color: "var(--color-base)",
+
                 fontWeight: 700,
                 fontSize: "15px",
                 lineHeight: "20px",
