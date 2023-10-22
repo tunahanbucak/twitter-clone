@@ -6,16 +6,12 @@ interface CustomButtonProps extends ButtonProps {
   size: "small" | "medium" | "large";
 }
 
-export default function ButtonComponent({
-  size,
-  children,
-  ...props
-}: CustomButtonProps) {
+export default function ButtonComponent({ size, children }: CustomButtonProps) {
   return (
     <Button
       size={size}
       sx={{
-        background: "#1d9bf0",
+        background: "var(--color-primary)",
         borderRadius: "9999px",
         width: {
           small: "30%",
@@ -37,7 +33,8 @@ export default function ButtonComponent({
           large: "0px 32px",
         }[size],
         "&:hover": {
-          background: "#0e7abf",
+          background: "var(--color-primary)",
+          opacity: 90,
         },
       }}
     >

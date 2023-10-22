@@ -19,7 +19,9 @@ export default function UserCard({ user }: UserCardProps) {
         display: "flex",
         gap: 3,
         transition: "background-color 0.3s",
-        "&:hover": { backgroundColor: "#5555" },
+        "&:hover": {
+          backgroundColor: "var(--background-third)",
+        },
       }}
     >
       <Box

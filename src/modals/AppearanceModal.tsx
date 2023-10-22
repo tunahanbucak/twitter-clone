@@ -1,17 +1,24 @@
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Link, Slider, Typography } from "@mui/material";
 import { useAppearance } from "../store/appearance/hooks";
 import {
   setBackgroundColor,
   setBoxShadow,
   setColor,
 } from "../store/appearance/actions";
-
+import { colors } from "../utils/consts";
+import React, { useState } from "react";
 interface ModalProps {
   close: () => void;
 }
-
+const fontSizes = [10, 12, 14, 16, 18];
 export default function AppearanceModal({ close }: ModalProps) {
-  const { backgroundColor, color } = useAppearance();
+  const [fontSize, setFontSize] = React.useState(16);
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    if (typeof newValue === "number") {
+      setFontSize(newValue);
+    }
+  };
+  const { backgroundColor, color, boxShadow } = useAppearance();
   return (
     <Box
       sx={{
@@ -39,7 +46,7 @@ export default function AppearanceModal({ close }: ModalProps) {
           mb: "20px",
         }}
       >
-        Bu ayarlar, bu taraıcıdakı tüm X hesapalrını etkiler.
+        Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
       </Typography>
       <Box
         sx={{
@@ -136,159 +143,457 @@ export default function AppearanceModal({ close }: ModalProps) {
                 }}
                 href="/x"
               >
-                {" "}
                 @X
-              </Link>{" "}
+              </Link>
               gibi bahsetmeler içerebilir
             </Typography>
           </Box>
         </Box>
       </Box>
-      <Box>
-        <Typography
-          sx={{
-            color: "var(--color-base-secondary)",
-            fontSize: "13px",
-            lineHeight: "20px",
-            fontWeight: "bold",
-            mb: "4px",
-          }}
-        >
-          Arka plan
-        </Typography>
-        <Box
-          sx={{
-            paddingLeft: "12px",
-            paddingRight: "12px",
-            paddingTop: "4px",
-            paddingBottom: "4px",
-            mb: "12px",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            background: "var(--background-secondary)",
-            borderRadius: "16px",
-            gap: "4px",
-          }}
-        >
-          <Button
-            onClick={() => {
-              setColor({
-                ...color,
-                base: "#0f1419",
-                baseSecondary: "#536471",
-              });
+      <Box
+        sx={{
+          display: "grid",
+          gap: 3,
+        }}
+      >
+        <Box>
+          <Typography
+            sx={{
+              color: "var(--color-base-secondary)",
+              fontSize: "13px",
+              lineHeight: "20px",
+              fontWeight: "bold",
+              mb: "4px",
+              ml: 2,
+            }}
+          >
+            Yazı tipi boyutu
+          </Typography>
+          <Box
+            sx={{
+              padding: "16px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "var(--background-secondary)",
+              borderRadius: "16px",
+              ml: 2,
+              mr: 2,
+              gap: "20px",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "13px",
+              }}
+            >
+              Aa
+            </Typography>
+            <Slider
+              value={fontSize}
+              min={10}
+              max={18}
+              step={2}
+              onChange={handleChange}
+              marks={fontSizes.map((value) => ({
+                value,
+                label: (
+                  <Box
+                    key={value}
+                    sx={{
+                      width: "16px",
+                      height: "16px",
+                      borderRadius: "50%",
+                      background:
+                        value === fontSize
+                          ? "var(--color-primary)"
+                          : "var(--color-secondary)",
+                      cursor: "pointer",
+                      position: "absolute",
+                      top: "-22px",
 
-              setBackgroundColor({
-                name: "light",
-                primary: "#fff",
-                secondary: "#f7f9f9",
-                third: "#eff3f4",
-                modal: "#00000066",
-              });
-              setBoxShadow(
-                "rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px"
-              );
-            }}
-            sx={{
-              height: "64px",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-              background: "white",
-              borderRadius: "4px",
-              ...(backgroundColor.name === "light" && {
-                borderColor: "var(--color-primary)",
-                border: "2px solid",
-              }),
-            }}
-          >
+                      transform: "translateX(-50%)",
+                    }}
+                    onClick={() => setFontSize(value)}
+                  />
+                ),
+              }))}
+              sx={{
+                marginBottom: "0px",
+                color: (theme) =>
+                  theme.palette.mode === "dark"
+                    ? "var(--color-primary)"
+                    : "var(--color-primary)",
+                "& .MuiSlider-thumb": {
+                  display: "none",
+                },
+              }}
+            />
             <Typography
               sx={{
-                textTransform: "none",
-                color: "#0f1419",
+                fontSize: "20px",
               }}
             >
-              Varsayılan
+              Aa
             </Typography>
-          </Button>
-          <Button
-            onClick={() => {
-              setColor({
-                ...color,
-                base: "#f7f9f9",
-                baseSecondary: "#8b98a5",
-              });
+          </Box>
+        </Box>
+        <Box>
+          <Typography
+            sx={{
+              color: "var(--color-base-secondary)",
+              fontSize: "13px",
+              lineHeight: "20px",
+              fontWeight: "bold",
+              mb: "4px",
+              ml: 2,
+            }}
+          >
+            Renk
+          </Typography>
+          <Box
+            sx={{
+              paddingTop: "4px",
+              paddingBottom: "8px",
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+              background: "var(--background-secondary)",
+              borderRadius: "16px",
+              ml: 2,
+              mr: 2,
+            }}
+          >
+            {colors.map((c, index) => (
+              <Button
+                key={index}
+                onClick={() => {
+                  setColor({
+                    ...color,
+                    ...c,
+                  });
+                }}
+                sx={{
+                  "--bg": c.primary,
+                  height: "40px",
+                  width: "40px",
+                  background: "var(--bg)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "white",
+                  minWidth: "0px",
+                  "&:hover": {
+                    background: "var(--bg)",
+                  },
+                }}
+              >
+                {color.primary === c.primary && (
+                  <svg viewBox="0 0 24 24" width={25}>
+                    <path
+                      fill="currentColor"
+                      d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                    />
+                  </svg>
+                )}
+              </Button>
+            ))}
+          </Box>
+        </Box>
+        <Box>
+          <Typography
+            sx={{
+              color: "var(--color-base-secondary)",
+              fontSize: "13px",
+              lineHeight: "20px",
+              fontWeight: "bold",
+              ml: 2,
+              mb: "4px",
+            }}
+          >
+            Arka plan
+          </Typography>
+          <Box
+            sx={{
+              paddingLeft: "12px",
+              paddingRight: "12px",
+              paddingTop: "4px",
+              paddingBottom: "4px",
+              mb: "12px",
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              background: "var(--background-secondary)",
+              borderRadius: "16px",
+              gap: "8px",
+              ml: 2,
+              mr: 2,
+            }}
+          >
+            <Button
+              onClick={() => {
+                setColor({
+                  ...color,
+                  base: "#0f1419",
+                  baseSecondary: "#536471",
+                });
 
-              setBackgroundColor({
-                name: "dark",
-                primary: "#15202b",
-                secondary: "#1e2732",
-                third: "#263340",
-                modal: "#5b708366",
-              });
-              setBoxShadow(
-                "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1pxs"
-              );
-            }}
-            sx={{
-              height: "64px",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-              background: "#15202b",
-              borderRadius: "4px",
-              ...(backgroundColor.name === "dark" && {
-                borderColor: "var(--color-primary)",
-                border: "2px solid",
-              }),
-            }}
-          >
-            <Typography
+                setBackgroundColor({
+                  name: "light",
+                  primary: "#fff",
+                  secondary: "#f7f9f9",
+                  third: "#eff3f4",
+                  modal: "#00000066",
+                });
+                setBoxShadow(
+                  "rgba(101, 119, 134, 0.2) 0px 0px 15px, rgba(101, 119, 134, 0.15) 0px 0px 3px 1px"
+                );
+              }}
               sx={{
-                textTransform: "none",
-                color: "#f7f9f9",
+                display: "flex",
+                alignItems: "center",
+                height: "64px",
+                paddingLeft: "10px",
+                paddingRight: "30px",
+                background: "white",
+                borderRadius: "4px",
+                border: "1px solid #5555",
+                ...(backgroundColor.name === "light" && {
+                  borderColor: "var(--color-primary)",
+                  border: "2px solid",
+                }),
+                "&:hover": {
+                  background: "white",
+                },
               }}
             >
-              Loş
-            </Typography>
-          </Button>
-          <Button
-            onClick={() => {
-              setColor({
-                ...color,
-                base: "#e7e9ea",
-                baseSecondary: "#71767b",
-              });
-              setBackgroundColor({
-                name: "darker",
-                primary: "#000000",
-                secondary: "#16181c",
-                third: "#212327",
-                modal: "#5b708366",
-              });
-              setBoxShadow(
-                "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1pxs"
-              );
-            }}
-            sx={{
-              height: "64px",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-              background: "black",
-              borderRadius: "4px",
-              ...(backgroundColor.name === "darker" && {
-                borderColor: "var(--color-primary)",
-                border: "2px solid",
-              }),
-            }}
-          >
-            <Typography
+              <Box
+                sx={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "background-color 0.3s",
+                  "&:hover": {
+                    backgroundColor: " rgba(0, 0, 0, 0.05)",
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "20px",
+                    borderRadius: "50%",
+                    border: "2px solid  #3e4144",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    ...(backgroundColor.name === "light" && {
+                      borderColor: "var(--color-primary)",
+                      border: "2px solid",
+                      color: "white",
+                      background: "var(--color-primary)",
+                    }),
+                  }}
+                >
+                  {backgroundColor.name === "light" && (
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                      />
+                    </svg>
+                  )}
+                </Box>
+              </Box>
+              <Typography
+                sx={{
+                  textTransform: "none",
+                  color: "#0f1419",
+                  fontWeight: "bold",
+                }}
+              >
+                Varsayılan
+              </Typography>
+            </Button>
+            <Button
+              onClick={() => {
+                setColor({
+                  ...color,
+                  base: "#f7f9f9",
+                  baseSecondary: "#8b98a5",
+                });
+
+                setBackgroundColor({
+                  name: "dark",
+                  primary: "#15202b",
+                  secondary: "#1e2732",
+                  third: "#263340",
+                  modal: "#5b708366",
+                });
+                setBoxShadow(
+                  "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1pxs"
+                );
+              }}
               sx={{
-                textTransform: "none",
-                color: "#f7f9f9",
+                height: "64px",
+                paddingLeft: "20px",
+                paddingRight: "20px",
+                background: "#15202b",
+                borderRadius: "4px",
+                justifyContent: "flex-start",
+                border: "1px solid #5555",
+                ...(backgroundColor.name === "dark" && {
+                  borderColor: "var(--color-primary)",
+                  border: "2px solid",
+                }),
+                "&:hover": {
+                  backgroundColor: "#15202b",
+                },
               }}
             >
-              Işıklar kapalı
-            </Typography>
-          </Button>
+              <Box
+                sx={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-start",
+                  transition: "background-color 0.3s",
+                  "&:hover": {
+                    backgroundColor: " rgba(0, 0, 0, 0.05)",
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "20px",
+                    borderRadius: "50%",
+                    border: "2px solid  #3e4144",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    ...(backgroundColor.name === "dark" && {
+                      borderColor: "var(--color-primary)",
+                      border: "2px solid",
+                      color: "white",
+                      background: "var(--color-primary)",
+                    }),
+                  }}
+                >
+                  {backgroundColor.name === "dark" && (
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                      />
+                    </svg>
+                  )}
+                </Box>
+              </Box>
+              <Typography
+                sx={{
+                  textTransform: "none",
+                  color: "#f7f9f9",
+                  fontWeight: "bold",
+                }}
+              >
+                Loş
+              </Typography>
+            </Button>
+            <Button
+              onClick={() => {
+                setColor({
+                  ...color,
+                  base: "#e7e9ea",
+                  baseSecondary: "#71767b",
+                });
+                setBackgroundColor({
+                  name: "darker",
+                  primary: "#000000",
+                  secondary: "#16181c",
+                  third: "#212327",
+                  modal: "#5b708366",
+                });
+                setBoxShadow(
+                  "rgba(255, 255, 255, 0.2) 0px 0px 15px, rgba(255, 255, 255, 0.15) 0px 0px 3px 1pxs"
+                );
+              }}
+              sx={{
+                border: "1px solid #5555",
+                height: "64px",
+                paddingLeft: "10px",
+                paddingRight: "20px",
+                background: "black",
+                borderRadius: "4px",
+                ...(backgroundColor.name === "darker" && {
+                  borderColor: "var(--color-primary)",
+                  border: "2px solid",
+                }),
+                "&:hover": {
+                  backgroundColor: " black",
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "background-color 0.3s",
+                  "&:hover": {
+                    backgroundColor: " rgba(0, 0, 0, 0.05)",
+                  },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "20px",
+                    height: "20px",
+                    borderRadius: "50%",
+                    border: "2px solid  #3e4144",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    ...(backgroundColor.name === "darker" && {
+                      borderColor: "var(--color-primary)",
+                      border: "2px solid",
+                      color: "white",
+                      background: "var(--color-primary)",
+                    }),
+                  }}
+                >
+                  {backgroundColor.name === "darker" && (
+                    <svg viewBox="0 0 24 24">
+                      <path
+                        fill="currentColor"
+                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                      />
+                    </svg>
+                  )}
+                </Box>
+              </Box>
+              <Typography
+                sx={{
+                  textTransform: "none",
+                  color: "#f7f9f9",
+                  fontWeight: "bold",
+                }}
+              >
+                Işıklar kapalı
+              </Typography>
+            </Button>
+          </Box>
         </Box>
       </Box>
       <Box
@@ -296,11 +601,37 @@ export default function AppearanceModal({ close }: ModalProps) {
           alignItems: "center",
           justifyContent: "center",
           display: "flex",
+          mt: "15px",
+          mb: "25px",
         }}
       >
-        <Button onClick={close} variant="outlined">
-          {" "}
-          Bitti
+        <Button
+          sx={{
+            background: "var(--color-primary)",
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
+            minHeight: "34px",
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            borderRadius: "99999px",
+            "&:hover": {
+              background: "var(--color-primary)",
+            },
+          }}
+          onClick={close}
+          variant="outlined"
+        >
+          <Typography
+            sx={{
+              textTransform: "none",
+              fontSize: "14px",
+              lineHeight: "19px",
+              color: "rgb(255, 255, 255)",
+            }}
+          >
+            Bitti
+          </Typography>
         </Button>
       </Box>
     </Box>

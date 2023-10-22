@@ -52,10 +52,10 @@ export default function Agendas({ title, children, more }: AgendasProps) {
             alignItems: "center",
             paddingX: 2,
             textDecoration: "none",
-            color: "1d9bf0",
+            color: "var(--color-primary)",
             transition: "background-color 0.3s",
             "&:hover": {
-              backgroundColor: "#5555",
+              backgroundColor: "var(--background-third)",
             },
           }}
         >

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import { useState } from "react";
@@ -32,8 +31,9 @@ export default function MoreSettings() {
   const closePopover = () => {
     setIsOpen(false);
   };
+
   return (
-    <div>
+    <Box>
       <Accordion
         expanded={isOpen}
         onChange={handleToggle}
@@ -184,6 +184,6 @@ export default function MoreSettings() {
           </Link>
         </AccordionDetails>
       </Accordion>
-    </div>
+    </Box>
   );
 }

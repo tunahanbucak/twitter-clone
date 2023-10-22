@@ -27,14 +27,13 @@ const Accordion = styled((props: AccordionProps) => (
     display: "none",
   },
 }));
-
 function CustomAccordion({ title, content, path }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div>
+    <Box>
       <Accordion
         expanded={isOpen}
         onChange={handleToggle}
@@ -100,7 +99,7 @@ function CustomAccordion({ title, content, path }: Props) {
           )}
         </AccordionDetails>
       </Accordion>
-    </div>
+    </Box>
   );
 }
 export default function MoreAccordion() {
