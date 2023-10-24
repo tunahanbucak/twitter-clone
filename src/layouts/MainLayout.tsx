@@ -20,7 +20,10 @@ export default function MainLayout({ children }: Props) {
       "--background-primary",
       appearance.backgroundColor.primary
     );
-    //document.documentElement.style.setProperty('--background-primary-alpha', appearance.backgroundColor.primary + 'a6')
+    document.documentElement.style.setProperty(
+      "--background-primary-alpha",
+      appearance.backgroundColor.primary + "a6"
+    );
     document.documentElement.style.setProperty(
       "--background-secondary",
       appearance.backgroundColor.secondary
@@ -75,7 +78,7 @@ export default function MainLayout({ children }: Props) {
       <Sidebar />
       <Box
         sx={{
-          flex: 1,
+          flex: 2,
           borderLeft: "1px solid var(--background-third)",
         }}
       >

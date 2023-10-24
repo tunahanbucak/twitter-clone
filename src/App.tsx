@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Notifications from "./pages/Notifications";
 import MainLayout from "./layouts/MainLayout";
@@ -9,6 +8,7 @@ import Lists from "./pages/Lists";
 import Communities from "./pages/Communities";
 import Premium from "./pages/Premium";
 import Profile from "./pages/Profile";
+import Home from "./pages/home/Home";
 
 function App() {
   return (

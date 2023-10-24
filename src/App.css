@@ -5,6 +5,15 @@ body {
   padding: 0;
 }
 
+/*
+Henuz aktif degil , tekrar bakilacak.
+
 .shadow-box {
   box-shadow: var(--box-shadow);
-}
+} */
+
+/*
+Henuz aktif degil , tekrar bakilacak.
+:root {
+  font-size: var(--font-size);;
+} */

@@ -31,6 +31,7 @@ export default function FooterMore() {
       }}
     >
       <Button
+        type="button"
         sx={{
           color: "var(--color-base-secondary)",
           outline: "none",
@@ -83,6 +84,7 @@ export default function FooterMore() {
       >
         {titles.map((title) => (
           <Button
+            type="button"
             sx={{
               justifyContent: "flex-start",
               width: "100%",
