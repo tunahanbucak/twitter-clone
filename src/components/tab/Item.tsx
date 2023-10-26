@@ -6,10 +6,8 @@ interface Props {
   children: ReactNode;
   id: string;
 }
-
 export default function Item({ children, id }: Props) {
   const { active, setActive } = useTab();
-
   return (
     <Button
       onClick={() => {

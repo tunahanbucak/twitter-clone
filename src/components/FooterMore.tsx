@@ -12,7 +12,6 @@ export default function FooterMore() {
   };
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-
   const titles = [
     "Hakkında",
     "X uygulamasını indir",
@@ -20,7 +19,6 @@ export default function FooterMore() {
     "İşletmeler için X",
     "Geliştiriciler",
   ];
-
   return (
     <Box
       sx={{

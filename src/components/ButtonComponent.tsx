@@ -1,11 +1,9 @@
-import * as React from "react";
 import Button, { ButtonProps } from "@mui/material/Button";
 import { Typography } from "@mui/material";
 
 interface CustomButtonProps extends ButtonProps {
   size: "small" | "medium" | "large";
 }
-
 export default function ButtonComponent({ size, children }: CustomButtonProps) {
   return (
     <Button

@@ -5,7 +5,6 @@ interface AgendasProps {
   children: React.ReactNode;
   more?: boolean | string;
 }
-
 export default function Agendas({ title, children, more }: AgendasProps) {
   return (
     <Paper

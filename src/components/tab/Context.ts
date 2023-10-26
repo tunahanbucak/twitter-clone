@@ -4,9 +4,7 @@ interface TabContextProps {
   active: string;
   setActive: React.Dispatch<React.SetStateAction<string>>;
 }
-
 const TabContext = createContext<TabContextProps | undefined>(undefined);
-
 const useTab = () => {
   const context = useContext(TabContext);
   if (context === undefined) {
@@ -14,5 +12,4 @@ const useTab = () => {
   }
   return context;
 };
-
 export { TabContext, useTab };

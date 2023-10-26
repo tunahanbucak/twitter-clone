@@ -1,7 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import Account from "./Account";
 import { numberFormat } from "../utils/formats";
-
 interface Props {
   post: {
     id: string;
@@ -31,18 +29,26 @@ interface Props {
     photos?: string[];
   };
 }
-
 export default function Post({ post }: Props) {
   return (
     <Box
       sx={{
-        px: "16px",
-        py: "12px",
-        gap: "12px",
+        padding: "1rem 2rem",
+        gap: "0.75rem",
         borderBottom: "1px solid var(--background-third)",
         display: "flex",
+        position: "relative",
         cursor: "pointer",
-        "&:hover": {
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          zIndex: -1,
+          transition: "color",
+          opacity: 0.5,
+          inset: 0,
+        },
+
+        "&:hover::before": {
           backgroundColor: "var(--background-secondary)",
         },
       }}
@@ -138,7 +144,6 @@ export default function Post({ post }: Props) {
               ml: -1.5,
               mt: 1.5,
             }}
-            className="flex -ml-1.5 mt-1.5"
           >
             <Box
               sx={{
@@ -146,11 +151,7 @@ export default function Post({ post }: Props) {
                 flex: 1,
                 alignItems: "center",
                 gap: "1px",
-                "&.group": {
-                  // Grup özelliği burada ayarlanabilir
-                },
               }}
-              className="flex-1 group flex items-center gap-px"
             >
               <Box
                 sx={{
@@ -161,22 +162,18 @@ export default function Post({ post }: Props) {
                   alignItems: "center",
                   justifyContent: "center",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      backgroundColor: "#1d9bf01a",
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    backgroundColor: "#1d9bf01a",
+                    color: "#1d9bf0",
                   },
                   borderRadius: "50%",
                 }}
-                className="w-[2.172rem] h-[2.172rem] transition-colors flex items-center justify-center text-[color:var(--color-base-secondary)] group-hover:bg-[#1d9bf01a] rounded-full group-hover:text-[#1d9bf0]"
               >
                 <svg
                   viewBox="0 0 24 24"
                   style={{
                     height: "1.172rem",
                   }}
-                  className="h-[1.172rem]"
                 >
                   <path
                     fill="currentColor"
@@ -189,29 +186,21 @@ export default function Post({ post }: Props) {
                   fontSize: "0.813rem",
                   transition: "color 0.3s",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    color: "#1d9bf0",
                   },
                 }}
-                className="text-[0.813rem] transition-colors text-[color:var(--color-base-secondary)] group-hover:text-[#1d9bf0]"
               >
                 {numberFormat(post.stats.comments)}
               </Typography>
             </Box>
-
             <Box
               sx={{
                 display: "flex",
                 flex: 1,
                 alignItems: "center",
                 gap: "1px",
-                "&.group": {
-                  // Grup özelliği burada ayarlanabilir
-                },
               }}
-              className="flex-1 group flex items-center gap-px"
             >
               <Box
                 sx={{
@@ -222,22 +211,18 @@ export default function Post({ post }: Props) {
                   alignItems: "center",
                   justifyContent: "center",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      backgroundColor: "#1d9bf01a",
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    backgroundColor: "#00ba7c1a",
+                    color: "#00ba7c",
                   },
                   borderRadius: "50%",
                 }}
-                className="w-[2.172rem] h-[2.172rem] transition-colors flex items-center justify-center text-[color:var(--color-base-secondary)] group-hover:bg-[#00ba7c1a] rounded-full group-hover:text-[#00ba7c]"
               >
                 <svg
                   viewBox="0 0 24 24"
                   style={{
                     height: "1.172rem",
                   }}
-                  className="h-[1.172rem]"
                 >
                   <path
                     fill="currentColor"
@@ -250,29 +235,21 @@ export default function Post({ post }: Props) {
                   fontSize: "0.813rem",
                   transition: "color 0.3s",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    color: "#00ba7c",
                   },
                 }}
-                className="text-[0.813rem] transition-colors text-[color:var(--color-base-secondary)] group-hover:text-[#00ba7c]"
               >
                 {numberFormat(post.stats.repost)}
               </Typography>
             </Box>
-
             <Box
               sx={{
                 display: "flex",
                 flex: 1,
                 alignItems: "center",
                 gap: "1px",
-                "&.group": {
-                  // Grup özelliği burada ayarlanabilir
-                },
               }}
-              className="flex-1 group flex items-center gap-px"
             >
               <Box
                 sx={{
@@ -283,22 +260,18 @@ export default function Post({ post }: Props) {
                   alignItems: "center",
                   justifyContent: "center",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      backgroundColor: "#1d9bf01a",
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    backgroundColor: "#f918801a",
+                    color: "#f91880",
                   },
                   borderRadius: "50%",
                 }}
-                className="w-[2.172rem] h-[2.172rem] transition-colors flex items-center justify-center text-[color:var(--color-base-secondary)] group-hover:bg-[#f918801a] rounded-full group-hover:text-[#f91880]"
               >
                 <svg
                   viewBox="0 0 24 24"
                   style={{
                     height: "1.172rem",
                   }}
-                  className="h-[1.172rem]"
                 >
                   <path
                     fill="currentColor"
@@ -311,29 +284,21 @@ export default function Post({ post }: Props) {
                   fontSize: "0.813rem",
                   transition: "color 0.3s",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    color: "#f91880",
                   },
                 }}
-                className="text-[0.813rem] transition-colors text-[color:var(--color-base-secondary)] group-hover:text-[#f91880]"
               >
                 {numberFormat(post.stats.like)}
               </Typography>
             </Box>
-
             <Box
               sx={{
                 display: "flex",
                 flex: 1,
                 alignItems: "center",
                 gap: "1px",
-                "&.group": {
-                  // Grup özelliği burada ayarlanabilir
-                },
               }}
-              className="flex-1 group flex items-center gap-px"
             >
               <Box
                 sx={{
@@ -344,22 +309,18 @@ export default function Post({ post }: Props) {
                   alignItems: "center",
                   justifyContent: "center",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      backgroundColor: "#1d9bf01a",
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    backgroundColor: "#1d9bf01a",
+                    color: "#1d9bf0",
                   },
                   borderRadius: "50%",
                 }}
-                className="w-[2.172rem] h-[2.172rem] transition-colors flex items-center justify-center text-[color:var(--color-base-secondary)] group-hover:bg-[#1d9bf01a] rounded-full group-hover:text-[#1d9bf0]"
               >
                 <svg
                   viewBox="0 0 24 24"
                   style={{
                     height: "1.172rem",
                   }}
-                  className="h-[1.172rem]"
                 >
                   <path
                     fill="currentColor"
@@ -372,18 +333,14 @@ export default function Post({ post }: Props) {
                   fontSize: "0.813rem",
                   transition: "color 0.3s",
                   color: "var(--color-base-secondary)",
-                  "&.group": {
-                    "&:hover": {
-                      color: "#1d9bf0",
-                    },
+                  "&:hover": {
+                    color: "#1d9bf0",
                   },
                 }}
-                className="text-[0.813rem] transition-colors text-[color:var(--color-base-secondary)] group-hover:text-[#1d9bf0]"
               >
                 {numberFormat(post.stats.view)}
               </Typography>
             </Box>
-
             <Box
               sx={{
                 width: "2.172rem",
@@ -393,15 +350,12 @@ export default function Post({ post }: Props) {
                 alignItems: "center",
                 justifyContent: "center",
                 color: "var(--color-base-secondary)",
-                "&.group": {
-                  "&:hover": {
-                    backgroundColor: "#1d9bf01a",
-                    color: "#1d9bf0",
-                  },
+                "&:hover": {
+                  backgroundColor: "#1d9bf01a",
+                  color: "#1d9bf0",
                 },
                 borderRadius: "50%",
               }}
-              className="w-[2.172rem] h-[2.172rem] transition-colors flex items-center justify-center text-[color:var(--color-base-secondary)] hover:bg-[#1d9bf01a] rounded-full hover:text-[#1d9bf0]"
             >
               <svg
                 viewBox="0 0 24 24"

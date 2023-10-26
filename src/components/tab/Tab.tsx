@@ -3,14 +3,12 @@ import Items from "./Items";
 import Item from "./Item";
 import Content from "./Content";
 import { TabContext } from "./Context";
-import { Box } from "@mui/material";
 import StickyHeader from "../StickyHeader";
 
 interface Props {
   children: ReactNode;
   activeTab: string;
 }
-
 export default function Tab({ children, activeTab }: Props) {
   const [active, setActive] = useState(activeTab);
   const contents = React.Children.toArray(children).filter(
@@ -27,7 +25,6 @@ export default function Tab({ children, activeTab }: Props) {
     (child) =>
       React.isValidElement(child) && (child as ReactElement).props.id === active
   );
-
   const data = {
     active,
     setActive,
@@ -35,7 +32,6 @@ export default function Tab({ children, activeTab }: Props) {
   useEffect(() => {
     setActive(activeTab);
   }, [activeTab]);
-
   return (
     <TabContext.Provider value={data}>
       {items}

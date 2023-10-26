@@ -3,21 +3,17 @@ import Popover from "@mui/material/Popover";
 import React, { useState } from "react";
 import { useAccounts } from "../store//auth/hooks";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
-import { useAppearance } from "../store/appearance/hooks";
 
 export default function Account() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-
   const account = useAccounts();
   return (
     <Box sx={{ ml: 1 }}>
