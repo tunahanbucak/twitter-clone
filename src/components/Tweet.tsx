@@ -71,7 +71,7 @@ export default function Tweet() {
       >
         <Box
           sx={{
-            ml: 10,
+            ml: 8.3,
           }}
         >
           <Button
