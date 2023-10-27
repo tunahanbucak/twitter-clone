@@ -71,7 +71,6 @@ const appearance = createSlice({
     },
   },
 });
-
 export const { _setBackgroundColor, _setColor, _setFontSize, _setBoxShadow } =
   appearance.actions;
 export default appearance.reducer;
