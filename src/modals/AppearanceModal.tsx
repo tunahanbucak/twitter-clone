@@ -140,6 +140,7 @@ export default function AppearanceModal({ close }: ModalProps) {
               <Link
                 sx={{
                   textDecoration: "none",
+                  color: "var(--color-primary)",
                 }}
                 href="/x"
               >

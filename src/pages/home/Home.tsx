@@ -4,6 +4,8 @@ import MainLayout from "../../layouts/MainLayout";
 import Tab from "../../components/tab/Tab";
 import StickyHeader from "../../components/StickyHeader";
 import ForYou from "./ForYou";
+import Premium from "../../components/Premium";
+import Tweet from "../../components/Tweet";
 
 export default function Home() {
   return (
@@ -32,6 +34,7 @@ export default function Home() {
           </Tab.Items>
         </StickyHeader>
         <Tab.Content id="for-you">
+          <Tweet />
           <ForYou />
         </Tab.Content>
         <Tab.Content id="followings">2.content</Tab.Content>

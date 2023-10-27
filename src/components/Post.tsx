@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { numberFormat } from "../utils/formats";
+import Photo from "./Photo";
 interface Props {
   post: {
     id: string;
@@ -59,6 +60,7 @@ export default function Post({ post }: Props) {
           height: "40px",
           borderRadius: "50%",
           objectFit: "cover",
+          marginLeft: -15,
         }}
         src={post.account.avatar}
         alt=""
@@ -126,6 +128,7 @@ export default function Post({ post }: Props) {
           <Box
             component="div"
             sx={{
+              mb: 2,
               "& p": {
                 margin: 0,
               },
@@ -137,6 +140,9 @@ export default function Post({ post }: Props) {
               __html: post.content.replace(/\n/g, "<br>"),
             }}
           />
+          {post.type === "photo" && post.photos && (
+            <Photo photos={post.photos} />
+          )}
 
           <Box
             sx={{

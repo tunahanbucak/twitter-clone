@@ -31,7 +31,6 @@ export default function MoreSettings() {
   const closePopover = () => {
     setIsOpen(false);
   };
-
   return (
     <Box>
       <Accordion
@@ -69,7 +68,11 @@ export default function MoreSettings() {
             Ayarlar ve Destek
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails
+          sx={{
+            ml: -2,
+          }}
+        >
           <Link
             sx={{
               width: "100%",
@@ -82,6 +85,7 @@ export default function MoreSettings() {
               gap: "0.75rem",
               fontSize: "15px",
               fontWeight: 500,
+              padding: "11px",
               transition: "background-color 0.3s",
               "&:hover": {
                 backgroundColor: "var(--background-secondary)",
@@ -109,6 +113,7 @@ export default function MoreSettings() {
               gap: "0.75rem",
               fontSize: "15px",
               fontWeight: 500,
+              padding: "11px",
               transition: "background-color 0.3s",
               "&:hover": {
                 backgroundColor: "var(--background-secondary)",
@@ -130,20 +135,22 @@ export default function MoreSettings() {
               setModal("appearance");
             }}
             sx={{
-              justifyContent: "flex-start",
-              textTransform: "none",
               width: "100%",
+              textDecoration: "none",
               display: "flex",
               color: "var(--color-base)",
               alignItems: "center",
-              paddingLeft: "0.75rem",
               paddingRight: "0.75rem",
               gap: "0.75rem",
               fontSize: "15px",
               fontWeight: 500,
+              padding: "11px",
               transition: "background-color 0.3s",
+              justifyContent: "flex-start",
+              textTransform: "none",
               "&:hover": {
                 backgroundColor: "var(--background-secondary)",
+                width: "100%",
               },
             }}
           >
@@ -167,6 +174,7 @@ export default function MoreSettings() {
               gap: "0.75rem",
               fontSize: "15px",
               fontWeight: 500,
+              padding: "11px",
               transition: "background-color 0.3s",
               "&:hover": {
                 backgroundColor: "var(--background-secondary)",

@@ -260,7 +260,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "İsrail",
+      value: "yönetimistifa",
     },
     postCount: 15640,
   },
@@ -268,7 +268,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Filistin",
+      value: "İcardi",
     },
     postCount: 15640,
   },
@@ -276,7 +276,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "İsrail",
+      value: "Galatasaray",
     },
     postCount: 15640,
   },
@@ -284,7 +284,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Filistin",
+      value: "KYK",
     },
     postCount: 15640,
   },
@@ -292,7 +292,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "İsrail",
+      value: "Bayern Münih",
     },
     postCount: 15640,
   },
@@ -300,7 +300,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Filistin",
+      value: "GSvFCB",
     },
     postCount: 15640,
   },
@@ -308,7 +308,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "tag",
-      value: "İsrail",
+      value: "UCL",
     },
     postCount: 15640,
   },
@@ -316,7 +316,7 @@ export const topics = [
     title: "Türkiye tarihinde gündemde",
     topic: {
       type: "query",
-      value: "Filistin",
+      value: "Aydın",
     },
     postCount: 15640,
   },
@@ -378,61 +378,23 @@ export const fontSizes = [14, 15, 16, 18, 19];
 export const posts = [
   {
     id: "1708632465282150796",
-    type: "poll",
-    content: `PROTOTURK'un paylaştığı videoları seviyor musunuz?
-Bu anket ders esnasında sorulmuştur.`,
-    poll: {
-      voted: false,
-      votes: 12,
-      answers: [
-        {
-          id: 1,
-          text: "Evet",
-          votes: 8,
-        },
-        {
-          id: 2,
-          text: "Hayır",
-          votes: 1,
-        },
-        {
-          id: 3,
-          text: "Yaaani",
-          votes: 3,
-        },
-      ],
-    },
-    account: {
-      avatar:
-        "https://pbs.twimg.com/profile_images/1200814302820753410/AhAh3xlU_400x400.png",
-      username: "prototurkcom",
-      fullName: "./prototurk",
-    },
-    stats: {
-      comments: 43535,
-      repost: 3434,
-      like: 96946,
-      view: 903453,
-    },
-  },
-  {
-    id: "1708632465282150796",
     type: "photo",
-    content: `Toplu günaydın, ben her sabah spora devam ama her gün post atmıyorum artık, max 4 günde bir atarım çünkü en fazla 4 foto paylaşılıyormuş 🤣`,
+    content: `Yanlış anlaşılmasın.. köy liginde değil devler liginde.😏`,
     photos: [
-      "https://pbs.twimg.com/media/F7VBIvaW0AIZyiX?format=jpg&name=large",
+      "https://pbs.twimg.com/media/F9YwOlRWMAAVeR3?format=jpg&name=small",
     ],
     account: {
       avatar:
-        "https://pbs.twimg.com/profile_images/1665642354009677824/LNZo7V8x_400x400.jpg",
-      username: "tayfunerbilen",
-      fullName: "Tayfun Erbilen",
+        "https://pbs.twimg.com/profile_images/1707367319796617216/1P4Jow1o_normal.jpg",
+      username: "opta",
+      fullName: "Opta",
+      verified: true,
     },
     stats: {
-      comments: 43535,
-      repost: 3434,
-      like: 96946,
-      view: 903453,
+      comments: 6573535,
+      repost: 343434,
+      like: 366946,
+      view: 23453453,
     },
   },
   {
@@ -441,7 +403,6 @@ Bu anket ders esnasında sorulmuştur.`,
     content: `Imagination Land!`,
     photos: [
       "https://pbs.twimg.com/media/F7ZIK8KWgAAP8pH?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F7VBIvZXEAAIpEM?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -487,7 +448,6 @@ And people have been busy executing god-like tasks.
     photos: [
       "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
       "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -514,13 +474,10 @@ This prompt is going viral- mimicking a creepy iPhone capture that looks insanel
 Prompt in ALT tag + more examples in thread:`,
     photos: [
       "https://pbs.twimg.com/media/F7aKxHhaAAAnHlS?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaW0AAyXEr?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large",
-      "https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large",
     ],
     account: {
       avatar:
-        "https://pbs.twimg.com/profile_images/1617700070710992896/pF3T_gMB_400x400.jpg",
+        "https://pbs.twimg.com/profile_images/1711152452735774720/Cotttl-n_200x200.jpg",
       username: "rowancheung",
       fullName: "Rowan Cheung",
       verified: true,
@@ -539,7 +496,6 @@ Prompt in ALT tag + more examples in thread:`,
     photos: [
       "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
       "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -561,7 +517,6 @@ Prompt in ALT tag + more examples in thread:`,
     photos: [
       "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
       "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -583,7 +538,6 @@ Prompt in ALT tag + more examples in thread:`,
     photos: [
       "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
       "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
     ],
     account: {
       avatar:
@@ -605,7 +559,6 @@ Prompt in ALT tag + more examples in thread:`,
     photos: [
       "https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900",
       "https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900",
-      "https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large",
     ],
     account: {
       avatar:
