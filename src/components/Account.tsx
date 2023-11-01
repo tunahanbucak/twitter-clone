@@ -16,7 +16,7 @@ export default function Account() {
   const id = open ? "simple-popover" : undefined;
   const account = useAccounts();
   return (
-    <Box sx={{ ml: 1 }}>
+    <Box sx={{ ml: 1, position: "fixed", bottom: 20 }}>
       <Button
         aria-describedby={id}
         sx={{
