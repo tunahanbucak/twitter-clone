@@ -10,9 +10,9 @@ export default function Rightbar() {
     <Box
       sx={{
         width: 350,
-        // minHeight: 1000,
-        maxHeight: 1600,
         mr: 2.5,
+        height: "100%",
+        minHeight: "1522.47px",
         position: "sticky",
         top: 0,
       }}

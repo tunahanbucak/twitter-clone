@@ -10,7 +10,6 @@ export default function SearchBar() {
   const theme = useTheme();
   const [query, setQuery] = useState("");
   const [focus, setFocus] = useState(false);
-
   const handleClickAway = () => {
     setFocus(false);
   };
@@ -19,10 +18,12 @@ export default function SearchBar() {
       <Box
         sx={{
           mb: 2,
-          mt: 1,
+          mt: 1.5,
           ml: 1,
-          position: "relative",
+          position: "sticky",
+          top: "0",
           width: "350px",
+          zIndex: 5,
         }}
       >
         <Box

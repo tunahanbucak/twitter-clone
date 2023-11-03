@@ -9,7 +9,7 @@ export default function Premium() {
         marginBottom: "1rem",
         borderRadius: "1.25rem",
         border: "1px solid var(--background-secondary)",
-        position: "relative",
+        //position: "relative",
         display: "flex",
         flexDirection: "column",
         width: 350,

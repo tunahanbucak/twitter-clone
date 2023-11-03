@@ -1,15 +1,9 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from "@mui/material/AccordionSummary";
-import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import { useState } from "react";
 import { AccordionDetails, AccordionSummary, Box } from "@mui/material";
-import MoreSettings from "./MoreSettings";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface Props {
@@ -119,7 +113,6 @@ export default function MoreAccordion() {
         content="Reklamlar"
         path="M1.996 5.5c0-1.38 1.119-2.5 2.5-2.5h15c1.38 0 2.5 1.12 2.5 2.5v13c0 1.38-1.12 2.5-2.5 2.5h-15c-1.381 0-2.5-1.12-2.5-2.5v-13zm2.5-.5c-.277 0-.5.22-.5.5v13c0 .28.223.5.5.5h15c.276 0 .5-.22.5-.5v-13c0-.28-.224-.5-.5-.5h-15zm8.085 5H8.996V8h7v7h-2v-3.59l-5.293 5.3-1.415-1.42L12.581 10z"
       />
-      <MoreSettings />
     </Box>
   );
 }

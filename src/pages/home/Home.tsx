@@ -1,10 +1,8 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import MainLayout from "../../layouts/MainLayout";
 import Tab from "../../components/tab/Tab";
 import StickyHeader from "../../components/StickyHeader";
 import ForYou from "./ForYou";
-import Premium from "../../components/Premium";
 import Tweet from "../../components/Tweet";
 
 export default function Home() {
@@ -37,7 +35,11 @@ export default function Home() {
           <Tweet />
           <ForYou />
         </Tab.Content>
-        <Tab.Content id="followings">2.content</Tab.Content>
+        <Tab.Content id="followings">
+          2.content
+          <Tweet />
+          <ForYou />
+        </Tab.Content>
       </Tab>
     </MainLayout>
   );

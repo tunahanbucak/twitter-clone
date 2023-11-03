@@ -38,7 +38,7 @@ export default function Topic({ item }: TopicsProps) {
         "&:hover": {
           backgroundColor: "var(--background-third)",
         },
-        position: "relative",
+        //  position: "relative",
       }}
       href="/"
     >

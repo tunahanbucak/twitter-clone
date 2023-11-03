@@ -1,4 +1,3 @@
-import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Popover from "@mui/material/Popover";
@@ -6,6 +5,7 @@ import PopupState, { bindTrigger, bindPopover } from "material-ui-popup-state";
 import { Box } from "@mui/material";
 import IconButton from "./IconButton";
 import MoreAccordion from "./MoreAccordion";
+import MoreSettings from "./MoreSettings";
 
 export default function More() {
   return (
@@ -144,6 +144,7 @@ export default function More() {
               }}
             ></Box>
             <MoreAccordion />
+            <MoreSettings />
           </Popover>
         </Box>
       )}

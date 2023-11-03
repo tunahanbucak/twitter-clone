@@ -12,7 +12,6 @@ export default function Agendas({ title, children, more }: AgendasProps) {
         backgroundColor: "var(--background-secondary)",
         borderRadius: "1.25rem",
         border: "1px solid var(--background-secondary)",
-        position: "relative",
         display: "flex",
         flexDirection: "column",
       }}
