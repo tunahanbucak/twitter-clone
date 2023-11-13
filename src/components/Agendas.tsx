@@ -42,7 +42,7 @@ export default function Agendas({ title, children, more }: AgendasProps) {
       </Box>
       {more && typeof more === "string" && (
         <Link
-          href={more}
+          href=""
           sx={{
             height: "3.25rem",
             display: "flex",
