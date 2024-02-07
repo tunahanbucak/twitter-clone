@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import React, { ReactNode, useEffect } from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
@@ -72,36 +72,40 @@ export default function MainLayout({ children }: Props) {
         mx: "auto",
         display: "flex",
         paddingLeft: 1,
-      }}
-    >
-      {modal && <Modal />}
-      <Sidebar />
-      <Box
-        sx={{
-          flex: 2,
-          borderLeft: "1px solid var(--background-third)",
-        }}
-      >
-        {children}
-      </Box>
-      <Box
-        sx={{
-          flex: 1,
-          display: "flex",
-          gap: "30px",
-        }}
-      >
-        <Box
-          sx={{
-            flex: 1,
-            borderRight: "1px solid var(--background-third)",
-            maxWidth: 600,
-          }}
-        >
-          <Outlet />
-        </Box>
-        <Rightbar />
-      </Box>
+      }}>
+      <Grid container spacing={3}>
+        <Grid item xs>
+          {modal && <Modal />}
+          <Sidebar />
+        </Grid>
+        <Grid item xs>
+          <Box
+            sx={{
+              flex: 2,
+              borderLeft: "1px solid var(--background-third)",
+            }}>
+            {children}
+          </Box>
+        </Grid>
+        <Grid item xs>
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              gap: "30px",
+            }}>
+            <Box
+              sx={{
+                flex: 1,
+                borderRight: "1px solid var(--background-third)",
+                maxWidth: 600,
+              }}>
+              <Outlet />
+            </Box>
+            <Rightbar />
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

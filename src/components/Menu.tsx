@@ -6,11 +6,7 @@ import ButtonComponent from "./ButtonComponent";
 
 export default function Menu() {
   return (
-    <Box
-      sx={{
-        ml: 1,
-      }}
-    >
+    <Box sx={{ ml: 1 }}>
       {mainMenu.map((menu, index) => (
         <NavLink
           key={index}
@@ -75,12 +71,17 @@ export default function Menu() {
                   )}
                   {isActive ? menu.icon.passive : menu.icon.active}
                 </Box>
+                {/* Show title on larger screens */}
                 <Typography
                   sx={{
                     color: isActive ? "var(--color-base)" : "var(--color-base)",
                     fontSize: "1.25rem",
                     paddingRight: "16px",
                     fontWeight: isActive ? "bold" : "normal",
+                    // Hide title on smaller screens (less than 600px width in this example)
+                    "@media (max-width: 600px)": {
+                      display: "none",
+                    },
                   }}
                 >
                   {menu.title}
