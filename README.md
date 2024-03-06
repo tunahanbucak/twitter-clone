@@ -1,4 +1,3 @@
-Canlı proje:'https://twitter-1978e.web.app'
 
 React(Typescript) ile MUI kullanilarak yapılmıştır.
 
